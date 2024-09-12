@@ -1,6 +1,19 @@
 /* Mobile first style is the standard (using min-width) */
 /* If Desktop first style then (max-width) */
 
+/* HEADER DEFAULT */
+
+
+/* INDEX PAGE */
+
+
+
+
+
+/* PROFILE PAGE */
+
+
+
 
 /* xs */ 
 /* @media (min-width: 475px) {} */
@@ -11,11 +24,96 @@
 
 
 /* md */
-/* @media (min-width: 768px) {} */
+@media (min-width: 768px) {
+
+
+
+    /* PROFILE PAGE */
+    .profile {
+
+    }
+
+    .profile__title {
+
+    }
+
+    .profile__desc {
+
+    }
+
+    .profile__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem;
+        gap: 0; 
+        overflow: hidden; 
+    }
+
+    .profile__container a {
+        flex: 1; 
+        transition: flex-grow 0.3s ease, opacity 0.3s ease; 
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-decoration: none; 
+    }
+    
+    .profile__item {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .profile__item img {
+        width: 100%;
+        height: auto; 
+        object-fit: cover; 
+        display: block;
+        transition: opacity 0.3s ease; 
+    }
+    
+    .profile__name {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        text-align: center;
+        padding: 0.5rem;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    
+    .profile__container a:hover {
+        flex-grow: 3;
+        z-index: 1; 
+    }
+    
+    .profile__container a:hover img {
+        opacity: 1; 
+    }
+    
+    .profile__container a:hover .profile__name {
+        opacity: 1;
+    }
+    
+    .profile__container a:not(:hover) {
+        opacity: 0.5; 
+        flex-grow: 2; 
+    }
+}
 
 
 /* Lg */
-/* @media (min-width: 1024px) {} */
+@media (min-width: 1024px) {
+
+
+
+
+    /* PROFILE PAGE */
+
+}
 
 
 /* xL */
