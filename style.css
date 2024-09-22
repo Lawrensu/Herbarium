@@ -128,9 +128,15 @@
 /* DEFAULTS */
 :root {
     /* Colors Default */
-    --clr-: #;
-    --clr-: #;
-    --clr-: #;
+    
+    --clr-brown: #9E6B1E; /* Color for boxes */
+    --clr-green: #639d51; /*Color for nav and footer */
+    --clr-light: #d7e4d4; /*color for background */
+
+    /* Extra Colors */
+    --clr-dark: #24380B; /* Colors for text */
+    --clr-strong: ; /* Color for strong text */
+    --clr-btn: ; /* Color for buttons */
 
     /* Colours for Proflle Page */
     /* Lawrence */
@@ -191,13 +197,13 @@ html {
 }
 
 body {
-    font-family: , sans-serif;
-    background-color: var(--clr-);
-    color: var(--clr-);
+    font-family: sans-serif;
+    background-color: var(--clr-light);
+    color: var(--clr-dark);
 }
 
 strong {
-    color: var(--clr-);
+    color: var(--clr-strong);
 }
 
 img,
@@ -240,11 +246,11 @@ body::-webkit-scrollbar-thumb {
     font-weight: 600;
     text-decoration: none;
     letter-spacing: -0.05em;
-    background-color: var(--clr-rose);
-    color: #f1f5f9;
+    background-color: var(--clr-);
+    color: var(--clr-);
     padding: 0.5em 1em;
     border-radius: 6px;
-    box-shadow: 0 10px 20px rgba(225, 29, 72, 0.5), 0 6px 6px rgba(225, 29, 72, 0.5), 0 0 100px -10px var(--clr-rose);
+    box-shadow: 0 10px 20px rgba(225, 29, 72, 0.5), 0 6px 6px rgba(225, 29, 72, 0.5), 0 0 100px -10px var(--clr-);
 
     transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -263,5 +269,6 @@ body::-webkit-scrollbar-thumb {
  } 
 
 .section {
-    margin-top: 5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
  }
