@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="images/constant/leaf.png" />
 
-    <meta name="" content="">
-    <meta name="" content="">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
     <meta name="author" content="Lawrence Lian anak Matius Ding">
 
     <link rel="stylesheet" type="text/css" href="style.css">
 
-    <title>Homepage</title>
+    <title>Welcome to Leafly</title>
 </head>
 
 <body>
@@ -18,7 +19,7 @@
      <header class="header container">
         <!-- Navigation -->
         <nav class="nav__wrapper-logo">
-            <img src="" alt="Welcome to Leafly">
+            <a href="index.html"><img class="logo__img" src="images/constant/logo.png" alt="Leafly"></a>
         </nav>
 
         <nav class="nav__wrapper-links">
@@ -33,40 +34,62 @@
 
                 <li><a class="nav__link" href="">Enquiry</a></li>
 
-                <li><a class="nav__link" href="">Profile</a></li>
+                <li><a class="nav__link" href="">About</a></li>
             </ul>
         </nav>
 
         <nav class="nav__wrapper-login">
-            <ul class="nav__login">
-                <li><a class="nav__login-link btn" href="">Login</a></li>
-            </ul>
+            <a class="nav__login-link" href="login.html">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" clip-rule="evenodd" />
+                  </svg>
+              </a>
         </nav>
      </header>
 
      <main>
-        <article class="">
-            <div>
-                <h1 class="">Welcome to Leafly</h1>
-                <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo magnam amet, ullam, quis at incidunt eveniet sit minus maxime alias et dolores quaerat error quia perferendis! Laudantium, ea? Nemo, fuga.</p>
+        <!-- Introduction -->
+        <article class="index__intro-wrapper container">
+            <div class="index__intro-box">
+                <h1 class="index__intro-title">Leafly</h1>
+                <p class="index__intro-desc">Preserving Plants' Diversity <br> for the Future
+                </p>
             </div>
-
-            <figure class="">
-                <img src="" alt="">
-            </figure>
         </article>
 
+        <!-- What is Herbarium -->
+        <article class="index__definition-wrapper container">
+            <div class="index__definition-box">
+                <h2 class="index__definition-title">Herbarium</h2>
+                <p class="index__definition-desc">A collection of plant samples maintained for long-term study is called a herbarium (Latin: hortus siccus). Typically, the samples are dried, pressed, and mounted on paper. Herbarium specimens are the general term for the dried and mounted plant samples. Additional items found in the herbarium could be loose seeds, dried large fruits, microscope slides, wood slices, fungi, algae, pollen, materials kept in silica, DNA extractions, and fluid-preserved flowers or fruit. Herbaria (plural for herbarium) also store and manage data sets, botanical illustrations, photographic slides, photographs, maps, and frequently have libraries of pertinent literature needed for use by researchers working with the specimens.
+                </p>
+            </div>
+
+                <img class="index__definition-img" src="images/index_page/herbarium.jpeg" alt="Herbarium">
+        </article>
+
+        <!-- Tutorial Boxes -->
         <section class="">
-            <div class="">
+            <h2 class=""></h2>
 
-            </div>
-            
             <div class="">
+                <div class="">
+                    <img src="" alt="">
 
-            </div>
-            
-            <div class="">
+                    <p></p>
+                </div>
+                
+                <div class="">
+                    <img src="" alt="">
 
+                    <p></p>
+                </div>
+                
+                <div class="">
+                    <img src="" alt="">
+
+                    <p></p>
+                </div>
             </div>
             
         </section>
@@ -77,7 +100,31 @@
      </main>
     
      <footer>
+        <div class="">
+            <div class="">
+                <p class=""><strong>Contacts</strong></p>
+    
+                <p class=""></p>
+            </div>
+    
+            <div class="">
+                <p class=""><strong>Address</strong></p>
+    
+                <p class=""></p>
+            </div>
+    
+            <div class="">
+                <p class=""><strong>Social Media</strong></p>
+    
+                <p class=""></p>
+            </div>
+        </div>
 
+        <div class="">
+            <p class=""><strong>Acknowledgement</strong></p>
+
+            <p class=""></p>
+        </div>
      </footer>
 </body>
 </html>

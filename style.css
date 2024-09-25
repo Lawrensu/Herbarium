@@ -1,15 +1,15 @@
 /* DEFAULTS */
 :root {
     /* Colors Default */
-    
     --clr-brown: #9E6B1E; /* Color for boxes */
     --clr-green: #639d51; /*Color for nav and footer */
-    --clr-light: #d7e4d4; /*color for background */
+    --clr-light: #d7e4d4; /*color for background */
 
     /* Extra Colors */
     --clr-dark: #24380B; /* Colors for text */
     --clr-strong: ; /* Color for strong text */
-    --clr-btn: ; /* Color for buttons */
+    --clr-btn: #f0b81a; /* Color for buttons */
+    --clr-btn2: #364b55;
 
     /* Colours for Proflle Page */
     /* Lawrence */
@@ -61,6 +61,7 @@
 }
 
 * {
+    box-sizing: border-box;
     margin: 0;
     line-height: calc(1em + 0.5rem);
 }
@@ -70,9 +71,8 @@ html {
 }
 
 body {
-    font-family: sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
     background-color: var(--clr-light);
-    color: var(--clr-dark);
 }
 
 strong {
@@ -104,18 +104,19 @@ button {
     font-weight: 600;
     text-decoration: none;
     letter-spacing: -0.05em;
-    background-color: var(--clr-);
-    color: var(--clr-);
+    background-color: var(--clr-btn2);
+    color: var(--clr-light);
     padding: 0.5em 1em;
     border-radius: 6px;
-    box-shadow: 0 10px 20px rgba(225, 29, 72, 0.5), 0 6px 6px rgba(225, 29, 72, 0.5), 0 0 100px -10px var(--clr-);
+    box-shadow: 0 10px 20px rgba(225, 29, 72, 0.5), 0 6px 6px rgba(225, 29, 72, 0.5), 0 0 100px -10px var(--clr-btn);
 
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .btn:hover {
+    color: var(--clr-btn);
     transform: translateY(-3px);
-    box-shadow: 0 14px 28px rgba(225, 29, 72, 0.25), 0 10px 10px rgba(225, 29, 72, 0.22), 0 0 120px -10px var(--clr-rose);
+    box-shadow: 0 14px 28px rgba(225, 29, 72, 0.25), 0 10px 10px rgba(225, 29, 72, 0.22), 0 0 120px -10px var(--clr-btn);
 }
 
 .container {
@@ -137,6 +138,16 @@ button {
 
 /* Navigation */
 
+
+
+
+/* Footer */
+.footer {
+    background-color: var(--clr-green);
+    color: var(--clr-light);
+    padding: 2rem;
+    text-align: center;
+}
 
 
 /* INDEX PAGE */
@@ -164,12 +175,24 @@ button {
     .header {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        padding-top: 2rem;
-        padding-bottom: 2rem;
+        justify-content: space-around;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
         position: relative;
         z-index: 9999;
         background-color: var(--clr-green);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .logo__img {
+        width: var(--size-7xl);
+        height: var(--size-7xl);
+
+        transition: transform 0.3s ease;
+    }
+
+    .logo__img:hover {
+        transform: scale(1.2);
     }
 
     .nav__menu {
@@ -177,23 +200,131 @@ button {
         align-items: center;
         list-style-type: none;
         padding: 0;
-        gap: 4em;
+        gap: 1em;
     }
 
     .nav__link {
+        position: relative;
         text-decoration: none;
         letter-spacing: -0.05em;
-        color: var(--clr-light);
+        color: var(--clr-dark);
+        font-size: var(--size-lg);
+        transition: color 0.3s ease;
+    }
+    
+    .nav__link::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: -2px; 
+        width: 0;
+        height: 2px; 
+        background-color: var(--clr-btn); 
+        transition: width 0.3s ease, left 0.3s ease;
+        transform: translateX(-50%);
+    }
+    
+    .nav__link:hover::after {
+        width: 100%; 
+        left: 50%;
+        transform: translateX(-50%);
     }
 
-    .nav__login {
+    .nav__link:hover {
+        color: var(--clr-btn);
+    }
+
+    .nav__login-link {
+        display: block;
+        color: var(--clr-dark);
+        width: var(--size-5xl);
+        height: var(--size-5xl);
+
+        transition: color 0.3s ease;    
+    }
+
+    .nav__login-link:hover {
+        color: var(--clr-btn);
+    }
+
+
+    /* INDEX PAGE */
+    .index__intro-wrapper {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 2rem;
+        padding: 12rem 2rem;
+        background-image: url('images/index_page/index__bg.jpeg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .index__intro-box {
+        padding: 2rem;
+        color: var(--clr-light);
+        width: 100%;
+        max-width: 40em;
+        border-radius: 0.4em;
+    }
+    
+    .index__intro-title {
+        font-size: var(--size-6xl);
+        margin-bottom: 1rem;
+        color: var(--clr-dark);
+    }
+
+    .index__intro-desc {
+        font-size: var(--size-4xl);
+        margin-bottom: 1rem;
+    }
+
+    /* Defintion Part */
+    .index__definition-wrapper {
+        margin-top: 8em;
         display: flex;
         align-items: center;
-        list-style-type: none;
-        padding: 0;
+        flex-wrap: wrap;
+        gap: 8em;
+        padding: 0 5em;
     }
 
+    .index__definition-box {
+        padding: 2rem;
+        color: var(--clr-dark);
+        border-radius: 0.4em;
+    }
 
+    .index__definition-box:nth-child(1) {
+        flex: 2;
+    }
+
+    .index__definition-title {
+        font-size: var(--size-4xl);
+        margin-bottom: 1rem;
+    }
+
+    .index__definition-desc {
+        font-size: var(--size-xl);
+        margin-bottom: 1rem;
+        text-align: justify;
+        text-justify: inter-word;
+    }
+
+    .index__definition-img {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        flex: 1;
+        width: 10em;
+        object-fit: cover;
+        border-radius: 0.4em;
+    }
+
+    /*  */
+
+
+    
     /* PROFILE PAGE */
     .profile {
 
@@ -273,8 +404,10 @@ button {
 
 /* Lg */
 @media (min-width: 1024px) {
-
-
+    /* Navigation */
+    .nav__menu {
+        gap: 4em;
+    }
 
 
     /* PROFILE PAGE */
