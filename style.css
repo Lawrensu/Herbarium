@@ -321,8 +321,30 @@ button {
         border-radius: 0.4em;
     }
 
-    /*  */
+    /* Study of Herbarium Part */
+    .index__study-wrapper {
+        margin-top: 8em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 0 5em;
+    }
 
+    .index__study-box {
+
+    }
+
+    .index__study-textbox {
+
+    }
+
+    .index__study-desc {
+        font-size: var(--size-xl);
+        margin-bottom: 1rem;
+        text-align: justify;
+        text-justify: inter-word;
+    }
 
     
     /* PROFILE PAGE */
