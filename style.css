@@ -11,7 +11,7 @@
     --clr-orange: #f0b81a; 
     --clr-btn: #364b55; /* Color for buttons */
 
-    /* Colours for Proflle Page */
+    /* Colours for Profile Page */
     /* Lawrence */
     --clr-: #;
     --clr-: #;
@@ -295,7 +295,50 @@ footer {
     }
 
     /* Footer for bigger display */
-
+    footer {
+        margin-top: 6rem;
+        background-color: var(--clr-green);
+        color: var(--clr-light);
+        padding: 2rem;
+        text-align: center;
+    }
+    
+    .footer__essential-wrapper {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 1em;
+    }
+    
+    .footer__essential-box {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .footer__essential-icon-wrapper {
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .footer__essential-icon {
+        color: var(--clr-dark);
+        width: var(--size-4xl);
+        height: var(--size-4xl);
+    
+        transition: color 0.3s ease, transform 0.3s ease;
+    }
+    
+    .footer__essential-icon:hover {
+        color: var(--clr-orange);
+        transform: scale(1.2);
+    }
+    
+    .footer__acknowledgement-wrapper {
+        margin-top: 2rem;
+    }
     
 
 
@@ -550,7 +593,7 @@ footer {
     
     .enquiry__text-box label{
         display: block;
-        color: var(--clr-orange);
+        color: var(--clr-light);
         font-weight: bold;
         font-size: var(--size-base);
         text-align: left;
