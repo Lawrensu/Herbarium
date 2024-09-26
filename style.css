@@ -558,7 +558,8 @@ footer {
         text-align: center;
         padding: 0.5rem;
         filter: brightness(50%);
-        transition: filter 0.3s ease;
+        opacity: 0;
+        transition: filter 0.3s ease, opacity 0.3s ease;
     }
     
     .profile__container a:hover {
@@ -572,6 +573,7 @@ footer {
     
     .profile__container a:hover .profile__name {
         filter: brightness(100%);
+        opacity: 1;
     }
     
     .profile__container a:not(:hover) {
