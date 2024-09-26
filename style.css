@@ -503,15 +503,17 @@ footer {
     
     /* PROFILE PAGE */
     .profile {
-
+        margin-top: 8rem;
     }
 
     .profile__title {
-
+        font-size: var(--size-6xl);
+        text-align: center;
     }
 
     .profile__desc {
-
+        font-size: var(--size-2xl);
+        text-align: center;
     }
 
     .profile__container {
@@ -525,7 +527,7 @@ footer {
 
     .profile__container a {
         flex: 1; 
-        transition: flex-grow 0.3s ease, opacity 0.3s ease; 
+        transition: flex-grow 0.3s ease, filter 0.3s ease; 
         overflow: hidden;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         text-decoration: none; 
@@ -542,20 +544,21 @@ footer {
         height: auto; 
         object-fit: cover; 
         display: block;
-        transition: opacity 0.3s ease; 
+        transition: filter 0.3s ease; 
     }
     
     .profile__name {
+        font-size: var(--size-2xl);
         position: absolute;
         bottom: 0;
         left: 0;
         right: 0;
         background: rgba(0, 0, 0, 0.5);
-        color: white;
+        color: var(--clr-light);
         text-align: center;
         padding: 0.5rem;
-        opacity: 0;
-        transition: opacity 0.3s ease;
+        filter: brightness(50%);
+        transition: filter 0.3s ease;
     }
     
     .profile__container a:hover {
@@ -564,15 +567,15 @@ footer {
     }
     
     .profile__container a:hover img {
-        opacity: 1; 
+        filter: brightness(100%);
     }
     
     .profile__container a:hover .profile__name {
-        opacity: 1;
+        filter: brightness(100%);
     }
     
     .profile__container a:not(:hover) {
-        opacity: 0.5; 
+        filter: brightness(50%);
         flex-grow: 2; 
     }
 
