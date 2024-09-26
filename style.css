@@ -169,9 +169,10 @@ button {
 /* @media (min-width: 640px) {} *
 
 
+/* PC display starts here */
 /* md */
 @media (min-width: 768px) {
-    /* Navigation */
+    /* Navigation for bigger display */
     .header {
         display: flex;
         align-items: center;
@@ -246,6 +247,10 @@ button {
     .nav__login-link:hover {
         color: var(--clr-orange);
     }
+
+    /* Footer for bigger display */
+
+    
 
 
     /* INDEX PAGE */
