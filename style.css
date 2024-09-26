@@ -350,6 +350,47 @@ footer {
         animation-delay: calc(0.1s * var(--i));
     }
 
+    /* Dropdown container for login */
+    .index__dropdown-login {
+        display: none;
+        position: absolute;
+        top: 70%;
+        background-color: var(--clr-light);
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1000;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        border-radius: 8px;
+        overflow: hidden;
+        opacity: 0;
+        backdrop-filter: blur(10px);
+        transform: translate(-20px);
+        transition: all 0.3s ease;
+    }
+
+    .index__dropdown-login a {
+        color: var(--clr-dark);
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        transform: translateY(-10px);
+        animation: slideDown 0.3s ease forwards;
+        transition: background-color 0.3s ease;
+    }
+
+    .index__dropdown-login a:hover {
+        color: var(--clr-orange);
+        background-color: var(--clr-green);
+    }
+
+    .nav__wrapper-login:hover .index__dropdown-login {
+        display: block;
+        opacity: 1;
+        transform: translate(-30%, 0);
+    }
+
     @keyframes slideDown {
         from {
             opacity: 0;
@@ -360,7 +401,6 @@ footer {
             transform: translateY(0);
         }
     }
-
 
     /* Footer for bigger display */
     footer {
@@ -696,8 +736,6 @@ footer {
     .tutorial__next-btn {
         margin: 0 auto;
     }
-    
-
 
 
     /* TOOLS PAGE */
