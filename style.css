@@ -132,6 +132,15 @@ button {
     margin-bottom: 2rem;
  }
 
+::placeholder {
+    color: var(--clr-dark);
+    opacity: 1; /* Firefox */
+}
+  
+::-ms-input-placeholder { /* Edge 12 -18 */
+    color: var(--clr-dark);
+}
+
 
 /* Mobile first style is the standard (using min-width) */
 /* If Desktop first style then (max-width) */
@@ -500,46 +509,54 @@ footer {
     }
 
 
-    /* ENQUIRE PAGE */
-    .contact-box{
-        width: 89%;
-        max-width: 900px;
-        position: absolute;
-        background: #fff;
-        top: 50%;
-        left: 50%;
-        text-align: center;
-        transform: translate(-50%,-50%);
-        padding: 35px 40px;
-        box-shadow: 0 0 0#000;
+    /* ENQUIRY PAGE */
+    .enquiry__wrapper {
+        margin-top: 6rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 4rem;
+    }
+
+    .enquiry__form {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin: 0 auto;
+        background-color: var(--clr-brown);
+        padding: 2rem;
         border-radius: 50px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .enquiry__contact-box{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
     }
     
-    .contact-box h1{
-        margin-top: 0;
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: 400%;
-    
+    .enquiry__contact-box h1{
+        font-size: var(--size-6xl);
+        color: var(--clr-dark);
     }
     
-    .text-box{
+    .enquiry__text-box{
         border: 1px solid#000;
         margin: 8px 0;
         padding: 12px 18px;
         border-radius: 14px;
-    
     }
     
-    .text-box label{
+    .enquiry__text-box label{
         display: block;
-        color: #000;
-        text-transform: capitalize;
-        font-size: 15px;
+        color: var(--clr-orange);
+        font-weight: bold;
+        font-size: var(--size-base);
         text-align: left;
     }
     
-    .text-box input, .text-box textarea{
-    
+    .enquiry__text-box input, .enquiry__text-box textarea, .enquiry__text-box select {
         outline: none;
         border: none;
         background: none;
@@ -548,30 +565,24 @@ footer {
         text-align: left;
     }
     
-    .button{
-        padding: 12px 14px;
-        margin-top: 6px;
-        border:1px solid #000;
-        border-radius: 15px;
-    
+    .submit__btn {
+        margin: 0 auto;
+        border: none;
+        cursor: pointer;
+        font-size: var(--size-base);
     }
-    
-    .button:hover{
-        background-color: red;
-        color: aqua;
-    }
-    
-    .links{
-        margin-top:8px;
-    }
-    
-    .links a{
-        color: #000;
-    }
-    
-    
 
-
+    fieldset {
+        border: 1px solid var(--clr-dark);
+        padding: 1rem;
+        border-radius: 1.5em;
+    }
+    
+    legend {
+        font-weight: bold;
+        padding: 0 10px;
+        color: var(--clr-dark);
+    }
 
     
     /* PROFILE PAGE */
@@ -610,14 +621,15 @@ footer {
         position: relative;
         width: 100%;
         height: 100%;
+        overflow: hidden;
     }
     
     .profile__item img {
         width: 100%;
-        height: auto; 
+        height: auto;
         object-fit: cover; 
         display: block;
-        transition: filter 0.3s ease; 
+        transition: filter 0.3s ease;
     }
     
     .profile__name {

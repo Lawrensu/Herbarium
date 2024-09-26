@@ -46,38 +46,93 @@
         </nav>
      </header>
 
-        <div class="contact-box">
-
-        <h1>Inquiry Form</h1>
-
-        <div class="text-box">
-                
-            <label>Full name</label>
-            <input type="text" name="" value="" placeholder="Enter Your Full Name" required>     
+     <article class="enquiry__wrapper container">
+        <form class="enquiry__form" action="#" method="post">
+            <div class="enquiry__contact-box">
+                <h1>Enquiry Form</h1>
         
-        </div>
+                <fieldset>
+                    <legend>Demographic Information</legend>
+                    <div class="enquiry__text-box">
+                        <label for="fname">First name</label>
+                        <input type="text" name="fname" id="fname" placeholder="Enter Your First Name" required="required" pattern="[A-Za-z]{1,25}" title="First name should contain only alphabetical characters and be up to 25 characters long.">      
+                    </div>
+    
+                    <div class="enquiry__text-box">
+                        <label for="lname">Last name</label>
+                        <input type="text" name="lname" id="lname" placeholder="Enter Your Last Name" required="required" pattern="[A-Za-z]{1,25}" title="Last name should contain only alphabetical characters and be up to 25 characters long.">      
+                    </div>
+    
+                    <div class="enquiry__text-box">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Enter Your Email Address" required="required">  
+                    </div>
+    
+                    <div class="enquiry__text-box">
+                        <label for="contact">Contact Number</label>
+                        <input type="tel" name="contact" id="contact" placeholder="Enter Your Contact Number" required="required" pattern="\d{10}" title="Contact number should be exactly 10 digits.">  
+                    </div>
+                </fieldset>
 
+                <fieldset>
+                    <legend>Home Address</legend>
 
-        <div class="text-box">
-            <label>Email id</label>
-            <input type="email id" name="" value="" placeholder="Enter Your Email id" required>  
-        </div>
+                    <div class="enquiry__text-box">
+                        <label for="street">Street address</label>
+                        <input type="text" name="street" id="street" placeholder="Enter Your Street Address" required="required" maxlength="40" title="Street address should be up to 40 characters long.">      
+                    </div>
 
-        <div class="text-box">
-            <label>Contact number</label>
-            <input type="Contact number" name="" value="" placeholder="Enter Your Contact Number" required>
-        </div>
+                    <div class="enquiry__text-box">
+                        <label for="city">City/town</label>
+                        <input type="text" name="city" id="city" placeholder="Enter Your City/Town" required="required" maxlength="20" title="City/town should be up to 20 characters long.">      
+                    </div>
 
-        <div class="text-box">
-            <label>Types Your Inquiry</label>
-            <textarea required></textarea>
-        </div>
+                    <div class="enquiry__text-box">
+                        <label for="state">State</label>
+                        <select name="state" id="state" required="required">
+                            <option value="">Select State</option>
+                            <option value="Johor">Johor</option>
+                            <option value="Kedah">Kedah</option>
+                            <option value="Kelantan">Kelantan</option>
+                            <option value="Kuala Lumpur">Kuala Lumpur</option>
+                            <option value="Labuan">Labuan</option>
+                            <option value="Melaka">Melaka</option>
+                            <option value="Negeri Sembilan">Negeri Sembilan</option>
+                            <option value="Pahang">Pahang</option>
+                            <option value="Penang">Penang</option>
+                            <option value="Perak">Perak</option>
+                            <option value="Perlis">Perlis</option>
+                            <option value="Putrajaya">Putrajaya</option>
+                            <option value="Sabah">Sabah</option>
+                            <option value="Sarawak">Sarawak</option>
+                            <option value="Selangor">Selangor</option>
+                            <option value="Terengganu">Terengganu</option>
+                        </select>
+                    </div>
 
-            <button type="button" class="button">Send your message</button>
-            <div class="links">
-                <a href="">create an account</a>
+                    <div class="enquiry__text-box">
+                        <label for="postcode">Postcode</label>
+                        <input type="text" name="postcode" id="postcode" placeholder="Enter Your Postcode" required="required" pattern="\d{5}" title="Postcode should be exactly 5 digits.">      
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Category</legend>
+                    <div class="enquiry__text-box">
+                        <label for="category">Category</label>
+                        <select name="category" id="category" required="required">
+                            <option value="">Select Category</option>
+                            <option value="Tutorial">Tutorial</option>
+                            <option value="Tools Used">Tools Used</option>
+                            <option value="Aftercare">Aftercare</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <input class="submit__btn btn" type="submit" value="Submit">
             </div>
-        </div>
+        </form>
+     </article>
 
         <!-- Footer Part -->
     <footer>
