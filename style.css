@@ -9,7 +9,7 @@
     --clr-dark: #24380B; /* Colors for text */
     --clr-strong: ; /* Color for strong text */
     --clr-orange: #f0b81a; 
-    --clr-btn2: #364b55; /* Color for buttons */
+    --clr-btn: #364b55; /* Color for buttons */
 
     /* Colours for Proflle Page */
     /* Lawrence */
@@ -328,23 +328,132 @@ button {
         flex-direction: column;
         align-items: center;
         flex-wrap: wrap;
-        padding: 0 5em;
+        padding: 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     .index__study-box {
+        position: relative;
+        display: flex;
+        padding: 8em 2em;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+    
+    .index__study-box::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+    }
 
+    .index__study-box:nth-child(1) {
+        background-image: url('images/index_page/index__study-bg.jpeg');
+        text-align: right;
+        justify-content: flex-end;
+    }
+
+    .index__study-box:nth-child(1) > * {
+        position: relative;
+        z-index: 2;
+    }
+
+    .index__study-box:nth-child(2) {
+        background-image: url('images/index_page/index__study-bg2.jpg');
+        text-align: left;
+        justify-content: flex-start;
+    }
+
+    .index__study-box:nth-child(2) > * {
+        position: relative;
+        z-index: 2;
+    }
+
+    .index__study-box:nth-child(3) {
+        background-image: url('images/index_page/index__study-bg3.jpg');
+        text-align: right;
+        justify-content: flex-end;
+    }
+
+    .index__study-box:nth-child(3) > * {
+        position: relative;
+        z-index: 2;
     }
 
     .index__study-textbox {
-
+        padding: 0 0.5rem;
+        width: 50%;
     }
 
     .index__study-desc {
+        color: var(--clr-light);
         font-size: var(--size-xl);
         margin-bottom: 1rem;
         text-align: justify;
         text-justify: inter-word;
     }
+
+    /* Tutorial Part */
+    .index__tutorial-wrapper {
+        margin-top: 8rem;
+    }
+
+    .index__tutorial-title {
+        font-size: var(--size-4xl);
+        text-align: center;
+    }
+
+    .index__tutorial-box-wrapper {
+        margin-top: 2em;
+        margin-bottom: 2em;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 2em;
+        padding: 2em;
+    }
+
+    .index__tutorial-box {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--clr-brown);
+        padding: 2rem;
+        gap: 1rem;
+        border-radius: 0.4em;
+        text-align: center;
+    }
+
+    .index__tutorial-box img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 0.4em;
+    }
+
+    .index__tutorial-box p {
+        font-size: var(--size-lg);
+        margin-top: 1rem;
+    }
+
+    .index__tutorial-btn {
+        width: var(--size-10xl);
+        margin: 0 auto;
+    }
+
+    .index__ending-wrapper {
+        margin-top: 6rem;
+        text-align: center;
+    }
+
+    .index__ending-wrapper p {
+        font-size: var(--size-2xl);
+    }
+
 
     
     /* PROFILE PAGE */
