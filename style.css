@@ -250,6 +250,10 @@ footer {
         gap: 1em;
     }
 
+    .nav__menu li {
+        position: relative;
+    }
+
     .nav__link {
         position: relative;
         text-decoration: none;
@@ -287,12 +291,76 @@ footer {
         width: var(--size-5xl);
         height: var(--size-5xl);
 
-        transition: color 0.3s ease;    
+        transition: color 0.3s ease, transform 0.3s ease;    
     }
 
     .nav__login-link:hover {
         color: var(--clr-orange);
+        transform: scale(1.2);
     }
+
+    /* Dropdown Part */
+    .dropdown {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: var(--clr-light);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        border-radius: 8px;
+        overflow: hidden;
+        opacity: 0;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(10px);
+        transform: translateY(-20px);
+    }
+
+    .dropdown li {
+        width: 200px; 
+        opacity: 0;
+        transform: translateY(-10px);
+        animation: slideDown 0.3s ease forwards;
+    }
+    
+    .dropdown a {
+        padding: 0.75rem 1rem;
+        display: block;
+        color: var(--clr-dark);
+        text-decoration: none;
+        white-space: nowrap;
+        transition: background-color 0.3s ease;
+    }
+
+    .dropdown a:hover {
+        background-color: var(--clr-green);
+        color: var(--clr-orange);
+    }
+    
+    .nav__menu li:hover .dropdown {
+        display: block;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .nav__menu li:hover .dropdown li {
+        animation-delay: calc(0.1s * var(--i));
+    }
+
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
 
     /* Footer for bigger display */
     footer {
@@ -550,6 +618,22 @@ footer {
     .index__ending-wrapper p {
         font-size: var(--size-2xl);
     }
+
+
+    /* CLASSIFICATION PAGE */
+
+
+
+    /* TUTORIAL PAGE */
+
+
+
+    /* TOOLS PAGE */
+
+
+
+    /* AFTERCARE HTML */
+
 
 
     /* ENQUIRY PAGE */
