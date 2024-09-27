@@ -661,7 +661,26 @@ footer {
 
 
     /* CLASSIFICATION PAGE */
-
+    .plant classification{
+        text-align: center;
+    }
+    
+    .table,th,td{
+        background-color: #d7e4d4;
+        border-radius: 50px;
+    }
+    
+    .table,td{
+        width: 100%;
+    }
+    
+    .img{
+        max-width: 50px;
+    }
+    
+    .classification__title {
+        
+    }
 
 
     /* TUTORIAL PAGE */
