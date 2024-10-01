@@ -157,6 +157,7 @@ footer {
     color: var(--clr-light);
     padding: 2rem;
     text-align: center;
+    font-style: italic;
 }
 
 .footer__essential-wrapper {
