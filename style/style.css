@@ -662,25 +662,45 @@ footer {
 
 
     /* CLASSIFICATION PAGE */
-    .plant classification{
-        text-align: center;
+    .classification__wrapper {
+        margin-top: 4rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
     }
-    
-    .table,th,td{
-        background-color: #d7e4d4;
-        border-radius: 50px;
-    }
-    
-    .table,td{
-        width: 100%;
-    }
-    
-    .img{
-        max-width: 50px;
-    }
-    
+
     .classification__title {
-        
+        text-align: center;
+        font-size: var(--size-6xl);
+    }
+
+    .classification {
+        width: 80%;
+        margin: 2rem auto; 
+        border-collapse: collapse; 
+        border-spacing: 0 10px; 
+        font-size: 1rem;
+        text-align: left;
+        border-radius: 1rem; 
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .classification th, .classification td {
+        padding: 12px 12px;
+        border-radius: 0.4em; 
+        border: 1px solid var(--clr-dark); 
+    }
+
+    .classification td {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+    }
+    
+    .classification__plant-img{
+        max-width: 15em;
+        border-radius: 0.4em;
     }
 
 
@@ -998,6 +1018,16 @@ footer {
         border: 1px solid black;
     }
 
+    /* Gibson */
+
+
+    /* Edward */
+
+
+    /* Mei Yee */
+
+
+    /* Faiq */
 
 
 
