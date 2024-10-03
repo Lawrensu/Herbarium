@@ -1578,13 +1578,6 @@ footer {
     --size-6xl: 3rem;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-}
-
 .login__wrapper {
     min-height: 100vh;
     display: flex;
