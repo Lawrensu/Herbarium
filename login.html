@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="images/constant/leaf.png">
 
-    <meta name="author" content="Mei Yee LAI">
+    <meta name="author" content="Edward">
     <meta name="keywords" content="">
     <meta name="description" content="">
 
-    <title>Registration</title>
-    <link rel="stylesheet" href="style/style.css">
+    <title>Login</title>
+
+    <link rel="stylesheet" type="text/css" href="style/style.css">
 </head>
 
 <body>
@@ -65,33 +66,21 @@
     </nav>
     </header>
 
-    <main class="registration__wrapper container">
-
-        <div class="registration__container">
-            <h1>Registration</h1>
-            
-            <form action="#" class="form registration__form">
-                <div class="input-box">
-                    <label for="fname">First Name</label>
-                    <input type="text" placeholder="Enter your first name" id="fname" name="fname" maxlength="25" minlength="1" required="required" pattern="[a-zA-Z]">
-                </div>
-                
-                <div class="input-box">
-                    <label for="lname">Last Name</label>
-                    <input type="text" placeholder="Enter your last name" id="lname" name="lname" maxlength="25" minlength="1" required="required" pattern="[a-zA-Z]">
-                </div>
-    
+    <main class="login__wrapper">
+        <div class="login__container">
+            <h1>Login</h1>
+            <form action="#" class="form login__form">
                 <div class="input-box">
                     <label for="email">Email</label>
                     <input type="email" placeholder="Enter your email" id="email" name="email" required>
                 </div>
-    
+
                 <div class="input-box">
                     <label for="password">Password</label>
-                    <input type="password" placeholder="Enter your password" id="password" name="password" maxlength="25" minlength="1" required="required">
+                    <input type="password" placeholder="Enter your password" id="password" name="password" maxlength="25" minlength="1" required>
                 </div>
-    
-                <input class="submit__btn btn" type="submit" value="Register">
+
+                <input class="submit__btn btn" type="submit" value="Login">
             </form>
         </div>
     </main>
@@ -148,3 +137,4 @@
         <a class="enhancement__btn btn" href="enhancement.html">Enhancement</a>
      </footer>
 </body>
+</html>
