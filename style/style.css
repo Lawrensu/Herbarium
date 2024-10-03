@@ -1519,6 +1519,12 @@ footer {
 
     /* REGISTRATION PAGE */
     .registration__wrapper {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #d7e4d4, #f0f4f8);
+        transition: background 0.3s ease-in-out;
         margin-top: 4rem;
         display: flex;
         justify-content: center;
@@ -1527,11 +1533,14 @@ footer {
     }
 
     .registration__container {
-        width: 80%; 
+        width: 90%; 
+        max-width: 600px; 
         background: var(--clr-yellow);
-        padding: 2rem;
-        border-radius: 0.4em;
+        padding: 3rem; 
+        border-radius: 15px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border: 5px dashed rgb(3, 95, 23);
+        border-image: linear-gradient(to right, rgb(3, 95, 23), rgb(34, 193, 195)) 1;
     }
 
     .registration__container h1 {
@@ -1539,7 +1548,7 @@ footer {
         color: var(--clr-dark);
         text-align: center;
     }
-
+    
     .registration__container .form {
         margin-top: 2rem; 
         border: 2px solid var(--clr-dark);
@@ -1549,6 +1558,17 @@ footer {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+    }
+    
+    .input-box {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .input-box label {
+        font-weight: bold;
     }
 
     .input-box input[type="text"],
