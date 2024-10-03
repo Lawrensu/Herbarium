@@ -27,10 +27,10 @@
     --clr-: #;
 
     /* Gibson */
-    --clr-: #;
-    --clr-: #;
-    --clr-: #;
-    --clr-: #;
+    --clr-icecold-gib: #a0d2eb;
+    --clr-freezepurple-gib: #e5eaf5;
+    --clr-mediumpurple-gib: #d0b0fa;
+    --clr-heavypurple-gib: #494d5f;
 
     /* Edward */
     --clr-yellow-ed: #f8fa8e;
@@ -1233,7 +1233,7 @@ footer {
         align-items: center;
         gap: 2rem;
         width: 80%;
-        background-color: var();
+        background-color: var(--clr-mediumpurple-gib);
         padding: 4rem;
         border-radius: 1em;
     }
@@ -1253,7 +1253,7 @@ footer {
         border: 10px groove var();
         padding: 20px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        background-color: var();
+        background-color: var(--clr-icecold-gib);
         animation: float 3s ease-in-out infinite; 
     }
 
@@ -1283,8 +1283,8 @@ footer {
     }
 
     .gibson__table th {
-        background-color: var();
-        color: var(--clr-light);
+        background-color: var(--clr-freezepurple-gib);
+        color: var(--clr-heavytpurple-gib);
         text-align: left;
     }
 
