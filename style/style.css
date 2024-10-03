@@ -830,33 +830,48 @@ footer {
         font-size: var(--size-6xl);
     }
 
-    .classification {
-        width: 80%;
-        margin: 2rem auto; 
-        border-collapse: collapse; 
-        border-spacing: 0 10px; 
-        font-size: 1rem;
-        text-align: left;
-        border-radius: 1rem; 
+    .card-container{
+        display: flex;
+        justify-content: space-around;
+        align-items: stretch;
+        margin-top: 2rem;
+        
+    }
+    
+    .card {
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        width: 28em;
+        background-color: #f0f0f0;
+        border-radius: 0.4em;
         overflow: hidden;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
     
-    .classification th, .classification td {
-        padding: 12px 12px;
-        border-radius: 0.4em; 
-        border: 1px solid var(--clr-dark); 
-    }
-
-    .classification td {
-        display: flex;
-        gap: 1rem;
-        align-items: center;
+    .card img{
+        width: 100%;
+        height: 30em;
+        border-top: 0.4em;
     }
     
-    .classification__plant-img{
-        max-width: 15em;
-        border-radius: 0.4em;
+    .card-content {
+        padding: 2rem;
+        color:var(--clr-dark);
+        font-size: var(--size-base);
+    }
+    
+    .card-content h2 {
+        font-size: var(--size-2xl);
+        margin-bottom: 0.5em;
+    }
+    
+    .card-content ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    .card-content ul li {
+        margin-bottom: 0.5rem;
     }
 
 
