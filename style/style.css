@@ -1,7 +1,7 @@
 /* DEFAULTS */
 :root {
     /* Colors Default */
-    --clr-brown: #9E6B1E; /* Color for boxes */
+    --clr-yellow: #f7eaad;
     --clr-green: #639d51; /*Color for nav and footer */
     --clr-light: #d7e4d4; /*color for background */
 
@@ -10,7 +10,8 @@
     --clr-strong: #022c22; /* Color for strong text */
     --clr-orange: #f0b81a; 
     --clr-btn: #364b55; /* Color for buttons */
-    --clr-yellow: #f7eaad; 
+    --clr-brown: #9E6B1E;
+     
 
     /* Colours for Profile Page */
     /* Lawrence */
@@ -150,7 +151,6 @@ button {
 
 
 
-
 /* Footer */
 footer {
     margin-top: 6rem;
@@ -198,6 +198,11 @@ footer {
     margin-top: 2rem;
 }
 
+.enhancement__btn {
+    margin-top: 2rem;
+    font-size: var(--size-base);
+}
+
 /* INDEX PAGE */
 
 
@@ -221,6 +226,14 @@ footer {
 /* md */
 @media (min-width: 768px) {
     /* Navigation for bigger display */
+    .nav__menu {
+        display: none;
+    }
+
+    .nav__toggle-label {
+        display: block;
+    }
+
     .header {
         display: flex;
         align-items: center;
@@ -483,6 +496,7 @@ footer {
     .index__intro-desc {
         font-size: var(--size-4xl);
         margin-bottom: 1rem;
+        color: var(--clr-yellow);
     }
 
     /* Defintion Part */
