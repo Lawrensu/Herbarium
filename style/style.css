@@ -39,10 +39,10 @@
     --clr-eggyolk-yellow-ed: #d6fa82;
     
     /* Mei Yee */
-    --clr-: #;
-    --clr-: #;
-    --clr-: #;
-    --clr-: #;
+    --clr-: #ffefd5;
+    --clr-: #ffe4e1;
+    --clr-: #faebd7;
+    --clr-: #ffebcd;
 
     /* Size (recommended from tailwind css)*/
     --size-xxs: 0.5rem;
