@@ -949,6 +949,55 @@ footer {
 
 
     /* TOOLS PAGE */
+    .tools__wrapper {
+        margin-top: 4rem;
+    }
+
+    .tools__wrapper h2 {
+        font-size: var(--size-6xl);
+        text-align: center;
+    }
+
+    .tool-list {
+        display: grid;
+        gap: 2rem;
+        justify-content: space-evenly;
+        padding: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(20em, 1fr)); 
+    }
+
+    .tool-item {
+        display: grid;
+        align-items: center;
+        border: 2px solid var(--clr-dark);
+        border-radius: 0.4em;
+        padding: 20px;
+        margin: 20px 0;
+        box-sizing: border-box;
+        background-color: var(--clr-yellow); 
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+        position: relative; 
+    }
+
+    .tool-item img {
+        width: 100%; 
+        height: 200px; 
+        object-fit: cover; 
+        border-radius: 0.4em; 
+        transition: transform 0.3s;
+    }
+
+    .tool-item img:hover {
+        transform: scale(1.1); 
+    }
+
+    .tools__fixed-nav {
+        margin-top: 4rem;
+        display: flex;
+        justify-content: center;
+        gap: 4rem;
+        align-items: center;
+    }
 
 
 
@@ -1286,6 +1335,7 @@ footer {
     .gibson__table th, .gibson__table td {
         padding: 12px 15px;
         border-radius: 1rem;
+        max-width: 200px;
     }
 
     .gibson__table th {
@@ -1359,6 +1409,7 @@ footer {
     .edward__table th, .edward__table td {
         padding: 12px 15px;
         border-radius: 1rem;
+        max-width: 200px;
     }
 
     .edward__table th {
@@ -1432,6 +1483,7 @@ footer {
     .meiyee__table th, .meiyee__table td {
         padding: 12px 15px;
         border-radius: 1rem;
+        max-width: 200px;
     }
 
     .meiyee__table th {
