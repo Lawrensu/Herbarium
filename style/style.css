@@ -1022,6 +1022,9 @@ footer {
     }
 
     .aftercare__card {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
         background-color: var(--clr-yellow);
         color: var(--clr-dark);
         padding: 30px 20px;
@@ -1034,6 +1037,132 @@ footer {
         border: 2px solid #2980b9;
     }
 
+    .aftercare__card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 4px;
+        width: 100%;
+        background: linear-gradient(to right, #2980b9, #8e44ad);
+        border-radius: 12px 12px 0 0;
+    }
+    
+    .aftercare__card img {
+        width: 80px;
+        height: 80px;
+        object-fit: contain;
+        margin-bottom: 20px;
+        transition: transform 0.3s ease;
+    }
+    
+    .aftercare__card h3 {
+        font-size: var(--size-4xl); 
+        color: #2c3e50;
+        text-transform: capitalize; 
+    }
+    
+    .aftercare__card p {
+        font-size: 1em;
+        margin-bottom: 15px;
+        color: var(--clr-dark);
+    }
+    
+    /* Card Hover Effects */
+    .aftercare__card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+        background-color: #ecf0f1; /* Light background on hover */
+    }
+    
+    .aftercare__card:hover img {
+        transform: scale(1.1);
+    }
+    
+    /* List styles */
+    .aftercare__card ul {
+        margin-top: 15px;
+        padding-left: 20px;
+        text-align: left;
+    }
+    
+    .aftercare__card ul li {
+        margin-bottom: 10px;
+        color: var(--clr-dark);
+    }
+
+    /* Section: Repairs */
+    .aftercare__repair-section {
+        background-color: var(--clr-yellow);
+        padding: 30px 20px;
+        margin-top: 4rem;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        position: relative;
+        overflow: hidden;
+        text-align: left;
+        border: 2px solid #8e44ad; 
+    }
+
+    .aftercare__repair-section h3 {
+        font-size: var(--size-4xl); 
+        margin-bottom: 20px;
+        color: var(--clr-dark);
+        text-transform: uppercase;
+    }
+
+    .aftercare__repair-section img {
+        width: 80px;
+        height: 80px;
+        object-fit: contain;
+        margin-bottom: 15px;
+        display: block;
+    }
+
+    .aftercare__repair-section p {
+        font-size: 1em;
+        color: #555;
+        margin-bottom: 20px;
+    }
+
+    .aftercare__repair-section table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 25px;
+        background-color: white;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .aftercare__repair-section th, .aftercare__repair-section td {
+        padding: 15px;
+        text-align: left;
+        font-size: 1em;
+    }
+
+    .aftercare__repair-section th {
+        background-color: #2980b9;
+        color: white;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .aftercare__repair-section td {
+        border-bottom: 1px solid #ddd;
+        color: #555;
+    }
+
+    .aftercare__repair-section tr:last-child td {
+        border-bottom: none;
+    }
+
+    /* Hover effect on the entire repair card */
+    .aftercare__repair-section:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    }
 
     .aftercare__fixed-nav {
         margin-top: 4rem;
