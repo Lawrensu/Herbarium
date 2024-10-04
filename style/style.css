@@ -1385,7 +1385,7 @@ footer {
         align-items: center;
         gap: 2rem;
         width: 80%;
-        background-color: var();
+        background-color: var(--clr-lightblue-my);
         padding: 4rem;
         border-radius: 1em;
     }
@@ -1402,10 +1402,10 @@ footer {
         height: 30em;
         object-fit: cover;
         border-radius: 50%;
-        border: 10px groove var();
+        border: 10px groove var(--clr-darkblue-my);
         padding: 20px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        background-color: var();
+        background-color: var(--clr-bluegrey-my);
         animation: float 3s ease-in-out infinite; 
     }
 
@@ -1435,7 +1435,7 @@ footer {
     }
 
     .meiyee__table th {
-        background-color: var();
+        background-color: var(--clr-darkblue-my);
         color: var(--clr-light);
         text-align: left;
     }
