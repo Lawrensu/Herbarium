@@ -1637,7 +1637,7 @@ footer {
         padding: 3rem; 
         border-radius: 15px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        border: 5px dashed rgb(3, 95, 23);
+        border: 10px dashed rgb(3, 95, 23);
         border-image: linear-gradient(to right, rgb(3, 95, 23), rgb(34, 193, 195)) 1;
     }
 
