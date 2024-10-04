@@ -780,7 +780,7 @@ footer {
     .index__tutorial-box {
         display: flex;
         flex-direction: column;
-        background-color: var(--clr-brown);
+        background-color: var(--clr-yellow);
         padding: 2rem;
         gap: 1rem;
         border-radius: 0.4em;
@@ -911,6 +911,7 @@ footer {
     }
 
     .tutorial__steps-box .step {
+        background-color: var(--clr-yellow);
         display: flex;
         flex-direction: column;
         align-items: center;
