@@ -33,16 +33,16 @@
     --clr-heavypurple-gib: #494d5f;
 
     /* Edward */
-    --clr-yellow-ed: #f8fa8e;
-    --clr-green-ed: #015e1d;
+    --clr-yellow-ed: #fff6b8;
+    --clr-lightbrown-ed: #fdd181;
     --clr-brown-ed: #c5814a;
-    --clr-eggyolk-yellow-ed: #d6fa82;
+    --clr-lightorange-ed: #ffffff;
     
     /* Mei Yee */
     --clr-darkblue-my: #191970;
     --clr-lightblue-my: #add8e6;
     --clr-pastelblue-my: #a7c7e7;
-    --clr-bluegrey-my: #ccccff;
+    --clr-bluegrey-my: #c6d7ff;
 
     /* Size (recommended from tailwind css)*/
     --size-xxs: 0.5rem;
@@ -1312,7 +1312,7 @@ footer {
         align-items: center;
         gap: 2rem;
         width: 80%;
-        background-color: var(--clr-brown-ed);
+        background-color: var(--clr-yellow-ed);
         padding: 4rem;
         border-radius: 1em;
     }
@@ -1329,10 +1329,10 @@ footer {
         height: 30em;
         object-fit: cover;
         border-radius: 50%;
-        border: 10px groove var(--clr-green-ed);
+        border: 10px groove var(--clr-lightbrown-ed);
         padding: 20px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        background-color: var(--clr-yellow-ed);
+        background-color: var(--clr-lightorange-ed);
         animation: float 3s ease-in-out infinite; 
     }
 
@@ -1362,7 +1362,7 @@ footer {
     }
 
     .edward__table th {
-        background-color: var(--clr-eggyolk-yellow-ed);
+        background-color: var(--clr-brown-ed);
         color: var(--clr-green-ed);
         text-align: left;
     }
