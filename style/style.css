@@ -1000,11 +1000,51 @@ footer {
     }
 
 
-
     /* AFTERCARE PAGE */
+    .aftercare__wrapper {
+        margin-top: 4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 
+    .aftercare__wrapper h1 {
+        font-size: var(--size-6xl);
+        text-align: center;
+    }
+
+    .aftercare__grid-container {
+        margin-top: 4rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(15em, 1fr)); 
+        gap: 20px;
+    }
+
+    .aftercare__card {
+        background-color: var(--clr-yellow);
+        color: var(--clr-dark);
+        padding: 30px 20px;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        position: relative;
+        overflow: hidden;
+        border: 2px solid #2980b9;
+    }
+
+
+    .aftercare__fixed-nav {
+        margin-top: 4rem;
+        display: flex;
+        justify-content: center;
+        gap: 4rem;
+        align-items: center;
+    }
 
     /* IDENTIFICATION PAGE */
+
 
 
     /* CONTRIBUTION PAGE */
