@@ -874,6 +874,7 @@ footer {
         margin-bottom: 0.5rem;
     }
 
+
     /* TUTORIAL PAGE */
     #tutorial {
         margin-top: 4rem;
@@ -968,7 +969,10 @@ footer {
     }
 
     .tool-item {
+        text-align: center;
         display: grid;
+        grid-template-columns: 1fr; 
+        grid-template-rows: auto auto 1fr auto; 
         align-items: center;
         border: 2px solid var(--clr-dark);
         border-radius: 0.4em;
@@ -977,7 +981,11 @@ footer {
         box-sizing: border-box;
         background-color: var(--clr-yellow); 
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
-        position: relative; 
+    }
+
+    .tool-item h3 {
+        grid-row: 1;
+        margin: 1rem 0;
     }
 
     .tool-item img {
@@ -986,10 +994,21 @@ footer {
         object-fit: cover; 
         border-radius: 0.4em; 
         transition: transform 0.3s;
+        grid-row: 2;
     }
 
     .tool-item img:hover {
         transform: scale(1.1); 
+    }
+
+    .tool-item figcaption {
+        grid-row: 3;
+        margin: 1rem 0;
+    }
+
+    .tool-item a {
+        grid-row: 4;
+        margin: 1rem 0;
     }
 
     .tools__fixed-nav {
