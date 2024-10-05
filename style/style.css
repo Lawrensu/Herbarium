@@ -1044,17 +1044,17 @@ footer {
     .aftercare__card {
         display: flex;
         flex-direction: column;
-        gap: 2rem;
-        background-color: var(--clr-yellow);
-        color: var(--clr-dark);
-        padding: 30px 20px;
-        border-radius: 12px;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        gap: 1rem;
+        padding: 1rem;
         text-align: center;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         position: relative;
         overflow: hidden;
-        border: 2px solid #2980b9;
+        background-color: var(--clr-yellow);
+        color: var(--clr-dark);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        border: 5px dashed rgb(3, 95, 23);
+        border-image: linear-gradient(to right, rgb(3, 95, 23), rgb(34, 193, 195)) 1;
     }
 
     .aftercare__card::before {
@@ -1064,27 +1064,26 @@ footer {
         left: 0;
         height: 4px;
         width: 100%;
-        background: linear-gradient(to right, #2980b9, #8e44ad);
-        border-radius: 12px 12px 0 0;
+        background: linear-gradient(to right, rgb(3, 95, 23), rgb(34, 193, 195)) 1;
     }
     
     .aftercare__card img {
-        width: 80px;
-        height: 80px;
+        border-radius: 1em;
+        margin-right: auto;
+        margin-left: auto;
+        width: var(--size-9xl);
+        height: var(--size-9xl);
         object-fit: contain;
-        margin-bottom: 20px;
         transition: transform 0.3s ease;
     }
     
     .aftercare__card h3 {
-        font-size: var(--size-4xl); 
-        color: #2c3e50;
-        text-transform: capitalize; 
+        font-size: var(--size-2xl); 
+        color: var(--clr-dark);
     }
     
     .aftercare__card p {
-        font-size: 1em;
-        margin-bottom: 15px;
+        font-size: var(--size-base);
         color: var(--clr-dark);
     }
     
@@ -1092,7 +1091,6 @@ footer {
     .aftercare__card:hover {
         transform: translateY(-10px);
         box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-        background-color: #ecf0f1; /* Light background on hover */
     }
     
     .aftercare__card:hover img {
@@ -1837,7 +1835,6 @@ footer {
 
 
     /* LOGIN PAGE */
-    
     .login__wrapper {
         min-height: 100vh;
         display: flex;
