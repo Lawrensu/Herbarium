@@ -1201,6 +1201,7 @@ footer {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
+
     .enquiry__contact-box{
         display: flex;
         flex-direction: column;
@@ -1818,7 +1819,6 @@ footer {
 
 
     /* LOGIN PAGE */
-    
     .login__wrapper {
         min-height: 100vh;
         display: flex;
@@ -1834,15 +1834,19 @@ footer {
     }
     
     .login__container {
+        position: absolute;
         width: 90%; 
         max-width: 600px; 
         background: var(--clr-yellow);
         padding: 3rem; 
-        border-radius: 15px;
+        border-radius: 50px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        border: 5px dashed rgb(3, 95, 23);
-        border-image: linear-gradient(to right, rgb(3, 95, 23), rgb(34, 193, 195)) 1;
+        border-image:linear-gradient(to right, rgb(3, 95, 23), rgb(34, 193, 195)) 1;
+        border: 5px solid rgb(3, 95, 23);
+        overflow: hidden;
+    
     }
+
     
     .login__container h1 {
         font-size: var(--size-6xl);
@@ -1865,33 +1869,35 @@ footer {
         width: 100%;
         margin-top: 20px;
         padding: 5px; 
-        transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
         display: flex;
         flex-direction: column;
         align-items: center;
+  
     }
     
     .login__form .input-box input {
         width: 100%;
-        padding: 20px; 
+        padding: 10px; 
         font-size: 20px; 
-        border: 2px solid #d7e4d4;
-        border-radius: 8px;
-        transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        border: 5px solid #d7e4d4;
+        border-radius: 15px;
+
     }
     
-    .login__form .input-box input:focus {
-        border-color: #ff9800;
-        box-shadow: 0 0 8px rgba(255, 152, 0, 0.5);
-    }
     
     .login__form .input-box label {
         font-size: 20px;
         color: var(--clr-dark);
         margin-bottom: 10px;
         font-weight: bold;
-    }
+
+ }
 }
+   
+
+
+
 
 
 
@@ -1909,5 +1915,9 @@ footer {
 }
 
 
+/* xL */
+/* @media (min-width: 1280px) {}  */
 
 
+/* 2xL */
+ /* @media (min-width: 1536px) { } */
