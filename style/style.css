@@ -818,62 +818,61 @@ footer {
 
 
     /* CLASSIFICATION PAGE */
-    .classification__wrapper {
-        margin-top: 4rem;
+    body{
         display: flex;
-        flex-direction: column;
-        gap: 2rem;
-    }
-
-    .classification__title {
-        text-align: center;
-        font-size: var(--size-6xl);
-    }
-
-    .card-container{
-        display: flex;
-        justify-content: space-around;
-        align-items: stretch;
-        margin-top: 2rem;
-        
-    }
-    
-    .card {
-        display: grid;
-        grid-template-rows: auto 1fr auto;
-        width: 28em;
-        background-color: #f0f0f0;
-        border-radius: 0.4em;
-        overflow: hidden;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-    
-    .card img{
-        width: 100%;
-        height: 30em;
-        border-top: 0.4em;
-    }
-    
-    .card-face card-front {
-        padding: 2rem;
-        color:var(--clr-dark);
-        font-size: var(--size-base);
-    }
-    
-    .card-face card-front h2 {
-        font-size: var(--size-2xl);
-        margin-bottom: 0.5em;
-    }
-    
-    .card-face card-back ul {
-        padding: 0;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #d7e4d4;
         margin: 0;
     }
 
-    .card-face card-back ul li {
-        margin-bottom: 0.5rem;
-    }
+    .flip-card-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+        padding: 2rem;
 
+    }
+    .flip-card {
+        background-color: #d7e4d4;
+        width: 200px;
+        height: 200px;
+        perspective: 1000px;
+    }
+    
+    .flip-card-inner {
+        position: relative;
+        width: 200%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+    }
+    
+    .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+    }
+    
+    .flip-card-front, .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+    }
+    
+    .flip-card-front {
+        background-color: #bbb;
+        color: black;
+    }
+    
+    .flip-card-back {
+        background-color: #555;
+        color: white;
+        transform: rotateY(180deg);
+    }
+    
 
     /* TUTORIAL PAGE */
     #tutorial {
@@ -1907,7 +1906,7 @@ footer {
         margin-bottom: 10px;
         font-weight: bold;
     }
-}
+
 
 
 
@@ -1923,7 +1922,6 @@ footer {
     /* PROFILE PAGE */
 
 }
-
-
+}
 
 
