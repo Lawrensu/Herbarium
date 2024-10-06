@@ -818,61 +818,138 @@ footer {
 
 
     /* CLASSIFICATION PAGE */
-    .classification__wrapper {
-        margin-top: 4rem;
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-    }
+.classification_title{
+    text-align: center;
+}
 
-    .classification__title {
-        text-align: center;
-        font-size: var(--size-6xl);
-    }
+.flip-card-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    justify-content: center;
+    padding: 2rem;
+}
 
-    .card-container{
-        display: flex;
-        justify-content: space-around;
-        align-items: stretch;
-        margin-top: 2rem;
-        
-    }
-    
-    .card {
-        display: grid;
-        grid-template-rows: auto 1fr auto;
-        width: 28em;
-        background-color: #f0f0f0;
-        border-radius: 0.4em;
-        overflow: hidden;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-    
-    .card img{
-        width: 100%;
-        height: 30em;
-        border-top: 0.4em;
-    }
-    
-    .card-content {
-        padding: 2rem;
-        color:var(--clr-dark);
-        font-size: var(--size-base);
-    }
-    
-    .card-content h2 {
-        font-size: var(--size-2xl);
-        margin-bottom: 0.5em;
-    }
-    
-    .card-content ul {
-        padding: 0;
-        margin: 0;
-    }
+.classification-flip-card-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+}
 
-    .card-content ul li {
-        margin-bottom: 0.5rem;
-    }
+.family-flip-card,
+.genus-flip-card,
+.species-flip-card{
+    width: 400px;
+    height: 300px;
+    perspective: 1000px;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+.flip-card{
+    background-color: #639d51;
+    width: 400px;
+    height: 400px;
+    perspective: 1000px;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+.family-flip-card-inner,
+.genus-flip-card-inner,
+.species-flip-card-inner,
+.flip-card-inner{
+position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+
+.family-flip-card-front,
+.genus-flip-card-front,
+.species-flip-card-front,
+.flip-card-front,
+.family-flip-card-back,
+.genus-flip-card-back,
+.species-flip-card-back,
+.flip-card-back{
+    position: absolute;
+    width: 100%;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+
+.family-flip-card-front,
+.genus-flip-card-front,
+.species-flip-card-front,
+.flip-card-front{
+    transform: rotateY(0deg);
+    z-index: 2;
+}
+
+.flip-card-front{
+    gap: 0;
+}
+
+.family-flip-card-front,
+.genus-flip-card-front,
+.species-flip-card-front{
+    background-color: white;
+    box-shadow: grey 10px;
+    width: 500px;
+    height: 250px;
+}
+
+.family-flip-card-back,
+.genus-flip-card-back,
+.species-flip-card-back,
+.flip-card-back{
+    transform: rotateY(180deg);
+}
+
+.family-flip-card-back,
+.genus-flip-card-back,
+.species-flip-card-back{
+    background-color: #639d51;
+    width: 600px;
+    height: 250px;
+}
+
+.flip-card:hover .flip-card-inner{
+    transform: rotateY(180deg);
+}
+
+.family-flip-card:hover .family-flip-card-inner,
+.genus-flip-card:hover .genus-flip-card-inner,
+.species-flip-card:hover .species-flip-card-inner{
+    transform: rotateY(180deg);
+}
+
+.flip-card-front h1,
+.flip-card-back h1,
+.flip-card-back ul,
+.family-flip-card-front h1,
+.family-flip-card-back h1,
+.family-flip-card-back ul,
+.genus-flip-card-front h1,
+.genus-flip-card-back h1,
+.genus-flip-card-back ul,
+.species-flip-card-front h1,
+.species-flip-card-back h1,
+.species-flip-card-back ul{
+    font-size: 16px;
+}
+
+.flip-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
 
     /* TUTORIAL PAGE */
     #tutorial {
@@ -968,7 +1045,10 @@ footer {
     }
 
     .tool-item {
+        text-align: center;
         display: grid;
+        grid-template-columns: 1fr; 
+        grid-template-rows: auto auto 1fr auto; 
         align-items: center;
         border: 2px solid var(--clr-dark);
         border-radius: 0.4em;
@@ -977,7 +1057,11 @@ footer {
         box-sizing: border-box;
         background-color: var(--clr-yellow); 
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
-        position: relative; 
+    }
+
+    .tool-item h3 {
+        grid-row: 1;
+        margin: 1rem 0;
     }
 
     .tool-item img {
@@ -986,10 +1070,21 @@ footer {
         object-fit: cover; 
         border-radius: 0.4em; 
         transition: transform 0.3s;
+        grid-row: 2;
     }
 
     .tool-item img:hover {
         transform: scale(1.1); 
+    }
+
+    .tool-item figcaption {
+        grid-row: 3;
+        margin: 1rem 0;
+    }
+
+    .tool-item a {
+        grid-row: 4;
+        margin: 1rem 0;
     }
 
     .tools__fixed-nav {
@@ -1025,17 +1120,17 @@ footer {
     .aftercare__card {
         display: flex;
         flex-direction: column;
-        gap: 2rem;
-        background-color: var(--clr-yellow);
-        color: var(--clr-dark);
-        padding: 30px 20px;
-        border-radius: 12px;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        gap: 1rem;
+        padding: 1rem;
         text-align: center;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         position: relative;
         overflow: hidden;
-        border: 2px solid #2980b9;
+        background-color: var(--clr-yellow);
+        color: var(--clr-dark);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        border: 5px dashed rgb(3, 95, 23);
+        border-image: linear-gradient(to right, rgb(3, 95, 23), rgb(34, 193, 195)) 1;
     }
 
     .aftercare__card::before {
@@ -1045,27 +1140,26 @@ footer {
         left: 0;
         height: 4px;
         width: 100%;
-        background: linear-gradient(to right, #2980b9, #8e44ad);
-        border-radius: 12px 12px 0 0;
+        background: linear-gradient(to right, rgb(3, 95, 23), rgb(34, 193, 195)) 1;
     }
     
     .aftercare__card img {
-        width: 80px;
-        height: 80px;
+        border-radius: 1em;
+        margin-right: auto;
+        margin-left: auto;
+        width: var(--size-9xl);
+        height: var(--size-9xl);
         object-fit: contain;
-        margin-bottom: 20px;
         transition: transform 0.3s ease;
     }
     
     .aftercare__card h3 {
-        font-size: var(--size-4xl); 
-        color: #2c3e50;
-        text-transform: capitalize; 
+        font-size: var(--size-2xl); 
+        color: var(--clr-dark);
     }
     
     .aftercare__card p {
-        font-size: 1em;
-        margin-bottom: 15px;
+        font-size: var(--size-base);
         color: var(--clr-dark);
     }
     
@@ -1073,7 +1167,6 @@ footer {
     .aftercare__card:hover {
         transform: translateY(-10px);
         box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-        background-color: #ecf0f1; /* Light background on hover */
     }
     
     .aftercare__card:hover img {
@@ -1891,12 +1984,16 @@ footer {
         color: var(--clr-dark);
         margin-bottom: 10px;
         font-weight: bold;
+<<<<<<< HEAD
 
  }
 }
    
 
 
+=======
+    }
+>>>>>>> 7e3c63062b69f5397159f1e5e600786faf8348d7
 
 
 
@@ -1908,15 +2005,19 @@ footer {
     .nav__menu {
         gap: 4em;
     }
-
+    /* Test */
 
     /* PROFILE PAGE */
 
 }
+<<<<<<< HEAD
 
 
 /* xL */
 /* @media (min-width: 1280px) {}  */
+=======
+}
+>>>>>>> 7e3c63062b69f5397159f1e5e600786faf8348d7
 
 
 /* 2xL */
