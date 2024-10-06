@@ -818,61 +818,138 @@ footer {
 
 
     /* CLASSIFICATION PAGE */
-    body{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background-color: #d7e4d4;
-        margin: 0;
-    }
+.classification_title{
+    text-align: center;
+}
 
-    .flip-card-container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 2rem;
-        justify-content: center;
-        padding: 2rem;
+.flip-card-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    justify-content: center;
+    padding: 2rem;
+}
 
-    }
-    .flip-card {
-        background-color: #d7e4d4;
-        width: 200px;
-        height: 200px;
-        perspective: 1000px;
-    }
-    
-    .flip-card-inner {
-        position: relative;
-        width: 200%;
-        height: 100%;
-        text-align: center;
-        transition: transform 0.6s;
-        transform-style: preserve-3d;
-    }
-    
-    .flip-card:hover .flip-card-inner {
-        transform: rotateY(180deg);
-    }
-    
-    .flip-card-front, .flip-card-back {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        backface-visibility: hidden;
-    }
-    
-    .flip-card-front {
-        background-color: #bbb;
-        color: black;
-    }
-    
-    .flip-card-back {
-        background-color: #555;
-        color: white;
-        transform: rotateY(180deg);
-    }
-    
+.classification-flip-card-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+}
+
+.family-flip-card,
+.genus-flip-card,
+.species-flip-card{
+    width: 400px;
+    height: 300px;
+    perspective: 1000px;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+.flip-card{
+    background-color: #639d51;
+    width: 400px;
+    height: 400px;
+    perspective: 1000px;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+.family-flip-card-inner,
+.genus-flip-card-inner,
+.species-flip-card-inner,
+.flip-card-inner{
+position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+
+.family-flip-card-front,
+.genus-flip-card-front,
+.species-flip-card-front,
+.flip-card-front,
+.family-flip-card-back,
+.genus-flip-card-back,
+.species-flip-card-back,
+.flip-card-back{
+    position: absolute;
+    width: 100%;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+
+.family-flip-card-front,
+.genus-flip-card-front,
+.species-flip-card-front,
+.flip-card-front{
+    transform: rotateY(0deg);
+    z-index: 2;
+}
+
+.flip-card-front{
+    gap: 0;
+}
+
+.family-flip-card-front,
+.genus-flip-card-front,
+.species-flip-card-front{
+    background-color: white;
+    box-shadow: grey 10px;
+    width: 500px;
+    height: 250px;
+}
+
+.family-flip-card-back,
+.genus-flip-card-back,
+.species-flip-card-back,
+.flip-card-back{
+    transform: rotateY(180deg);
+}
+
+.family-flip-card-back,
+.genus-flip-card-back,
+.species-flip-card-back{
+    background-color: #639d51;
+    width: 600px;
+    height: 250px;
+}
+
+.flip-card:hover .flip-card-inner{
+    transform: rotateY(180deg);
+}
+
+.family-flip-card:hover .family-flip-card-inner,
+.genus-flip-card:hover .genus-flip-card-inner,
+.species-flip-card:hover .species-flip-card-inner{
+    transform: rotateY(180deg);
+}
+
+.flip-card-front h1,
+.flip-card-back h1,
+.flip-card-back ul,
+.family-flip-card-front h1,
+.family-flip-card-back h1,
+.family-flip-card-back ul,
+.genus-flip-card-front h1,
+.genus-flip-card-back h1,
+.genus-flip-card-back ul,
+.species-flip-card-front h1,
+.species-flip-card-back h1,
+.species-flip-card-back ul{
+    font-size: 16px;
+}
+
+.flip-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
 
     /* TUTORIAL PAGE */
     #tutorial {
