@@ -10,15 +10,14 @@
     --clr-strong: #022c22; /* Color for strong text */
     --clr-orange: #f0b81a; 
     --clr-btn: #364b55; /* Color for buttons */
-    --clr-brown: #9E6B1E;
      
 
     /* Colours for Profile Page */
     /* Lawrence */
-    --clr-yellow-law: #eed271;
-    --clr-pink-law: #efbecb;
-    --clr-violet-law: #8c3ac2;
-    --clr-dark-pink-law: #b292de;
+    --clr-dark-law: #0c0307;
+    --clr-red-law: #740c15;
+    --clr-light-law: #f5f2e7;
+    --clr-orange-law: #fb9936;
 
     /* Faiq */
     --clr-: #;
@@ -1215,6 +1214,12 @@ footer {
         justify-content: center;
     }
 
+    .identify__wrapper h1 {
+        text-align: center;
+        color: var(--clr-dark);
+        font-size: var(--size-6xl);
+    }
+
 
     /* CONTRIBUTION PAGE */
     .contribution {
@@ -1492,7 +1497,7 @@ footer {
         align-items: center;
         gap: 2rem;
         width: 80%;
-        background-color: var(--clr-pink-law);
+        background-color: var(--clr-red-law);
         padding: 4rem;
         border-radius: 1em;
     }
@@ -1509,25 +1514,27 @@ footer {
         height: 30em;
         object-fit: cover;
         border-radius: 50%;
-        border: 10px groove var(--clr-dark-pink-law);
+        border: 10px groove var(--clr-orange-law);
         padding: 20px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        background-color: var(--clr-yellow-law);
+        background-color: var(--clr-light-law);
         animation: float 3s ease-in-out infinite; 
     }
 
     .lawrence__profile h1 {
+        color: var(--clr-light);
         font-size: 200%;
         font-weight: bold;
     }
 
     .lawrence__profile p {
+        color: var(--clr-light);
         font-size: var(--size-xl);
         font-family: Arial, sans-serif;
     }
 
     .lawrence__table {
-        border: 1px solid black;
+        border: 1px solid var(--clr-light);
         border-radius: 1rem;
         width: 90%;
         padding: 12px 15px;
@@ -1543,13 +1550,14 @@ footer {
     }
 
     .lawrence__table th {
-        background-color: var(--clr-violet-law);
-        color: var(--clr-light);
+        background-color: var(--clr-orange-law);
+        color: var(--clr-dark);
         text-align: left;
     }
 
     .lawrence__table td {
-        border: 1px solid black;
+        border: 1px solid var(--clr-orange);
+        color: var(--clr-light);
     }
 
     .lawrence__table ul {
