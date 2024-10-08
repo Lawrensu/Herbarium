@@ -11,7 +11,7 @@
 
     <link rel="stylesheet" type="text/css" href="style/style.css">
 
-    <title>Meet Faiq</title>
+    <title>Contribute</title>
 </head>
 
 <body>  
@@ -66,10 +66,66 @@
     </nav>
     </header>
 
-    <main>
-        <article>
-
-
+    <main class="contribution__container container">
+        <article class="contribution">
+            <section class="contribution__wrapper">  
+                <h1>Contribute Plant Data</h1>
+                
+                <form class="contribution__form" action="#" method="post">
+                    <fieldset>
+                        <legend>Plant Information</legend>
+                        <div class="contribution__text-box">
+                            <label for="plant-name">Plant Name (max 25 characters):</label>
+                            <input type="text" id="plant-name" name="plant-name" maxlength="25" required="required" pattern="[A-Za-z ]+">
+                        </div>
+                            
+                        <div class="contribution__text-box">
+                            <label for="plant-family">Plant Family:</label>
+                            <select id="plant-family" name="plant-family" required>
+                                <option value="" disabled selected>Select Family</option>
+                                <option value="rosaceae">Rosaceae</option>
+                                <option value="fabaceae">Fabaceae</option>
+                                <option value="poaceae">Poaceae</option>
+                            </select>
+                        </div>
+            
+                        <div class="contribution__text-box">
+                            <label for="plant-genus">Plant Genus:</label>
+                            <select id="plant-genus" name="plant-genus" required="required">
+                                <option value="" disabled selected>Select Genus</option>
+                                <option value="rosa">Rosa</option>
+                                <option value="pisum">Pisum</option>
+                                <option value="zea">Zea</option>
+                            </select>
+                        </div>
+            
+                        <div class="contribution__text-box">
+                            <label for="plant-species">Plant Species:</label>
+                            <select id="plant-species" name="plant-species" required="required">
+                                <option value="" disabled selected>Select Species</option>
+                                <option value="rosa_gallica">Rosa gallica</option>
+                                <option value="pisum_sativum">Pisum sativum</option>
+                                <option value="zea_mays">Zea mays</option>
+                            </select>
+                        </div>
+                    </fieldset>
+        
+                    <fieldset>
+                        <legend>Picture Upload</legend>
+                        <div class="contribution__text-box">
+                            <label for="fresh-leaf">Upload Fresh Leaf Photo:</label>
+                            <input type="file" id="fresh-leaf" name="fresh-leaf" accept="image/*" required="required">
+                        </div>
+                        
+                        <div class="contribution__text-box">
+                            <label for="herbarium">Upload Herbarium Photo:</label>
+                            <input type="file" id="herbarium" name="herbarium" accept="image/*" required="required">
+                        </div>
+                    </fieldset>
+                    
+                    <button class="contribution__btn btn">Submit</button>
+                </form>
+            </section>
         </article>
     </main>
 

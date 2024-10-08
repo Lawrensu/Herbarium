@@ -66,30 +66,33 @@
     </header>
 
     <main class="registration__wrapper container">
-
         <div class="registration__container">
             <h1>Registration</h1>
             
-            <form action="#" class="form registration__form">
-                <div class="input-box">
-                    <label for="fname">First Name</label>
-                    <input type="text" placeholder="Enter your first name" id="fname" name="fname" maxlength="25" minlength="1" required="required" pattern="[a-zA-Z]">
-                </div>
-                
-                <div class="input-box">
-                    <label for="lname">Last Name</label>
-                    <input type="text" placeholder="Enter your last name" id="lname" name="lname" maxlength="25" minlength="1" required="required" pattern="[a-zA-Z]">
-                </div>
-    
-                <div class="input-box">
-                    <label for="email">Email</label>
-                    <input type="email" placeholder="Enter your email" id="email" name="email" required>
-                </div>
-    
-                <div class="input-box">
-                    <label for="password">Password</label>
-                    <input type="password" placeholder="Enter your password" id="password" name="password" maxlength="25" minlength="1" required="required">
-                </div>
+            <form action="#" method="post" class="registration__form">
+
+                <fieldset>
+                    <legend>Welcome to Leafly</legend>
+                    <div class="registration__input-box">
+                        <label for="fname">First Name</label>
+                        <input type="text" placeholder="Enter your first name" id="fname" name="fname" maxlength="25" minlength="1" required="required" pattern="[a-zA-Z]">
+                    </div>
+                    
+                    <div class="registration__input-box">
+                        <label for="lname">Last Name</label>
+                        <input type="text" placeholder="Enter your last name" id="lname" name="lname" maxlength="25" minlength="1" required="required" pattern="[a-zA-Z]">
+                    </div>
+        
+                    <div class="registration__input-box">
+                        <label for="email">Email</label>
+                        <input type="email" placeholder="Enter your email" id="email" name="email" required>
+                    </div>
+        
+                    <div class="registration__input-box">
+                        <label for="password">Password</label>
+                        <input type="password" placeholder="Enter your password" id="password" name="password" maxlength="25" minlength="1" required="required">
+                    </div>
+                </fieldset>
     
                 <input class="submit__btn btn" type="submit" value="Register">
             </form>

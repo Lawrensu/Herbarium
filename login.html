@@ -66,23 +66,27 @@
     </nav>
     </header>
 
-    <main class="login__wrapper">
-        <div class="login__container">
+    <main class="login__wrapper container">
+        <article class="login__container">
             <h1>Login</h1>
-            <form action="#" class="form login__form" method="post">
-                <div class="input-box">
-                    <label for="email">Email</label>
-                    <input type="email" placeholder="Enter your email" id="email" name="email" required>
-                </div>
 
-                <div class="input-box">
-                    <label for="password">Password</label>
-                    <input type="password" placeholder="Enter your password" id="password" name="password" maxlength="25" minlength="1" required>
-                </div>
+            <form action="#" class="login__form" method="post">
+                <fieldset>
+                    <legend>Welcome back to Leafly</legend>
+                    <div class="login__input-box">
+                        <label for="email">Email</label>
+                        <input type="email" placeholder="Enter your email" id="email" name="email" required="required">
+                    </div>
+
+                    <div class="login__input-box">
+                        <label for="password">Password</label>
+                        <input type="password" placeholder="Enter your password" id="password" name="password" maxlength="25" minlength="1" required="required">
+                    </div>
+                </fieldset>
 
                 <input class="submit__btn btn" type="submit" value="Login">
             </form>
-        </div>
+        </article>
     </main>
 
     <!-- Footer Part -->
