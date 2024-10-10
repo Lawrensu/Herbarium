@@ -3030,7 +3030,7 @@ legend {
     .profile__header {
         font-size: var(--size-6xl);
         padding-top: 0;
-        margin-top: 4rem;
+        margin-top: 2rem;
         text-align: center;
     }
 
@@ -3044,7 +3044,7 @@ legend {
     }
 
     .profile__instagram {
-        color: var(--clr-dark);
+        color: var(--clr-orange);
         width: var(--size-5xl);
         transition: color 0.3s ease, transform 0.3s ease;
     }
@@ -3065,7 +3065,7 @@ legend {
 
     /* LAWRENCE PAGE */
     .lawrence__profile-wrapper {
-        margin-top: 4rem;
+        margin-top: 2rem;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -3142,7 +3142,7 @@ legend {
 
     /* Gibson */
     .gibson__profile-wrapper {
-        margin-top: 4rem;
+        margin-top: 2rem;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -3217,7 +3217,7 @@ legend {
 
     /* Edward */
     .edward__profile-wrapper {
-        margin-top: 4rem;
+        margin-top: 2rem;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -3292,7 +3292,7 @@ legend {
 
     /* Mei Yee */
     .meiyee__profile-wrapper {
-        margin-top: 4rem;
+        margin-top: 2rem;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -3367,13 +3367,13 @@ legend {
 
     /* Faiq */
     .faiq__profile-wrapper {
-        margin-top: 4rem;
+        margin-top: 2rem;
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 2rem;
         width: 80%;
-        background-color: var();
+        background-color: var(--clr-space-faiq);
         padding: 4rem;
         border-radius: 1em;
     }
@@ -3390,25 +3390,27 @@ legend {
         height: 30em;
         object-fit: cover;
         border-radius: 50%;
-        border: 10px groove var();
+        border: 10px groove var(--clr-davy-gray-faiq);
         padding: 20px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        background-color: var();
+        background-color: var(--clr-taupe-gray-faiq);
         animation: float 3s ease-in-out infinite; 
     }
 
     .faiq__profile h1 {
         font-size: 200%;
         font-weight: bold;
+        color: var(--clr-light);
     }
 
     .faiq__profile p {
         font-size: var(--size-xl);
         font-family: Arial, sans-serif;
+        color: var(--clr-light);
     }
 
     .faiq__table {
-        border: 1px solid black;
+        border: 1px solid var(--clr-light);
         border-radius: 1rem;
         width: 90%;
         padding: 12px 15px;
@@ -3421,16 +3423,17 @@ legend {
         padding: 12px 15px;
         border-radius: 1rem;
         font-size: var(--size-base);
+        color: var(--clr-light);
     }
 
     .faiq__table th {
-        background-color: var();
-        color: var(--clr-light);
+        background-color: var(--clr-silver-faiq);
+        color: var(--clr-dark);
         text-align: left;
     }
 
     .faiq__table td {
-        border: 1px solid black;
+        border: 1px solid var(--clr-light);
     }
 
     .faiq__table ul {
