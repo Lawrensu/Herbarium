@@ -281,11 +281,6 @@ button {
     display: none;
 }
 
-
-
-
-
-
 /* Footer */
 footer {
     margin-top: 6rem;
@@ -338,8 +333,205 @@ footer {
     font-size: var(--size-base);
 }
 
-/* INDEX PAGE */
 
+/* INDEX PAGE */
+.index__intro-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 12em 0rem;
+    background-image: url('images/index_page/index__bg.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.index__intro-box {
+    padding: 2rem;
+    max-width: 40em;
+}
+
+.index__intro-title {
+    font-size: var(--size-5xl);
+    margin-bottom: 1rem;
+    color: var(--clr-dark);
+}
+
+.index__intro-desc {
+    font-size: var(--size-2xl);
+    color: var(--clr-yellow);
+}
+
+/* Defintion Part */
+.index__definition-wrapper {
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3.5em;
+    padding: 0 0.5em;
+    text-align: center;
+}
+
+.index__definition-box {
+    padding: 2rem;
+    color: var(--clr-dark);
+}
+
+.index__definition-title {
+    font-size: var(--size-4xl);
+    margin-bottom: 1rem;
+}
+
+.index__definition-desc {
+    font-size: var(--size-xl);
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.index__definition-img {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 25em;
+    object-fit: cover;
+    border-radius: 0.4em;
+}
+
+/* Study of Herbarium Part */
+.index__study-wrapper {
+    margin-top: 4em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.index__study-box {
+    position: relative;
+    display: flex;
+    padding: 3em 0.5em;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.index__study-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.index__study-box:nth-child(1) {
+    background-image: url('images/index_page/index__study-bg.jpeg');
+    text-align: right;
+    justify-content: flex-end;
+}
+
+.index__study-box:nth-child(1) > * {
+    position: relative;
+    z-index: 2;
+}
+
+.index__study-box:nth-child(2) {
+    background-image: url('images/index_page/index__study-bg2.jpg');
+    text-align: left;
+    justify-content: flex-start;
+}
+
+.index__study-box:nth-child(2) > * {
+    position: relative;
+    z-index: 2;
+}
+
+.index__study-box:nth-child(3) {
+    background-image: url('images/index_page/index__study-bg3.jpg');
+    text-align: right;
+    justify-content: flex-end;
+}
+
+.index__study-box:nth-child(3) > * {
+    position: relative;
+    z-index: 2;
+}
+
+.index__study-textbox {
+    padding: 0 1rem;
+    width: 80%;
+}
+
+.index__study-desc {
+    color: var(--clr-light);
+    font-size: var(--size-base);
+    margin-bottom: 1rem;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+/* Tutorial Part */
+.index__tutorial-wrapper {
+    margin-top: 4rem;
+}
+
+.index__tutorial-title {
+    font-size: var(--size-4xl);
+    text-align: center;
+}
+
+.index__tutorial-box-wrapper {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2em;
+    padding: 2em;
+}
+
+.index__tutorial-box {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--clr-yellow);
+    padding: 2rem;
+    gap: 1rem;
+    border-radius: 0.4em;
+    text-align: center;
+    max-width: 45%;
+    min-width: 250px;
+    flex: 1 1 45%;
+}
+
+.index__tutorial-box img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0.4em;
+}
+
+.index__tutorial-box p {
+    font-size: var(--size-lg);
+    margin-top: 1rem;
+}
+
+.index__tutorial-btn {
+    width: var(--size-10xl);
+    margin: 0 auto;
+}
+
+.index__ending-wrapper {
+    margin-top: 6rem;
+    text-align: center;
+}
+
+.index__ending-wrapper p {
+    font-size: var(--size-2xl);
+}
 
 
 
@@ -641,8 +833,10 @@ footer {
 
     /* Defintion Part */
     .index__definition-wrapper {
+        text-align: left;
         margin-top: 4em;
         display: flex;
+        flex-direction: row;
         align-items: center;
         flex-wrap: wrap;
         gap: 8em;
