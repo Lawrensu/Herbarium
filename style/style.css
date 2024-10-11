@@ -1089,7 +1089,6 @@ footer {
 }
 
 .contribution__wrapper h1 {
-    margin-top: 1rem;
     text-align: center;
     color: var(--clr-dark);
     font-size: var(--size-5xl);
@@ -1738,7 +1737,6 @@ legend {
 }
 
 .registration__container h1 {
-    margin-top: 1rem;
     text-align: center;
     color: var(--clr-dark);
     font-size: var(--size-6xl);
@@ -2836,7 +2834,17 @@ legend {
         color: var(--clr-dark);
     }
 
+    .identify__upload-wrapper ol {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
     .identify__form {
+        padding: 1.5rem 1rem;
+        border: var(--clr-dark) 2px dashed;
+        border-radius: 0.4em;
+        margin-top: 1rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -2880,10 +2888,17 @@ legend {
         align-items: center;
     }
 
+    .identify__result-img-wrapper img {
+        width: 20em;
+        height: 20em;
+        object-fit: cover;
+        border-radius: 0.4em;
+    }
+
 
     /* CONTRIBUTION PAGE */
     .contribution {
-        padding-top: 2rem;
+        padding-top: 0;
         display: flex;
         flex-direction: column;
         margin-top: 4rem;
@@ -2892,13 +2907,14 @@ legend {
     }
 
     .contribution__wrapper h1 {
-        margin-top: 1rem;
+        margin: 0;
         text-align: center;
         color: var(--clr-dark);
         font-size: var(--size-6xl);
     }
 
     .contribution__wrapper {
+        padding: 0;
         display: flex;
         flex-direction: column;
         gap: 2rem;
@@ -2954,7 +2970,7 @@ legend {
 
     /* ENQUIRY PAGE */
     .enquiry__wrapper {
-        padding-top: 2rem;
+        padding-top: 0;
         display: flex;
         flex-direction: column;
         margin-top: 4rem;
@@ -2977,6 +2993,7 @@ legend {
     }
 
     .enquiry__form {
+        padding: 0;
         display: flex;
         flex-direction: column;
         width: 40vw;
@@ -3547,7 +3564,6 @@ legend {
     }
 
     .registration__container h1 {
-        margin-top: 1rem;
         text-align: center;
         color: var(--clr-dark);
         font-size: var(--size-6xl);
