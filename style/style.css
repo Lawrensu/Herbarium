@@ -373,9 +373,42 @@ footer {
     transform: scale(1.2);
 }
 
-.footer__acknowledgement-wrapper {
-    margin-top: 2rem;
+
+.main-acknowledgement {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 5px; 
 }
+
+.footer__acknowledgement-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 5px; 
+    padding: 5px 0; 
+}
+
+.acknowledgement-section {
+    flex: 1;
+    padding: 2px; 
+    border-radius: 2px;
+}
+
+.tutorial_acknowlegement, .tools_acknowledgement, .care_acknowledgement {
+    font-weight: bold;
+    margin-bottom: 8px; 
+    text-align: center;
+}
+
+.footer__acknowledgement-link {
+    display: block;
+    margin-bottom: 5px; 
+    text-decoration: none;
+}
+
+.footer__acknowledgement-link:hover {
+    text-decoration: underline;
+}
+
 
 .enhancement__btn {
     margin-top: 2rem;
