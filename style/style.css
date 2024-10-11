@@ -383,30 +383,31 @@ footer {
 .footer__acknowledgement-wrapper {
     display: flex;
     justify-content: center;
-    gap: 5px; 
+    gap: 1rem; 
     padding: 5px 0; 
 }
 
 .acknowledgement-section {
+    display: flex;
+    flex-direction: column;
     flex: 1;
-    padding: 2px; 
-    border-radius: 2px;
-}
-
-.tutorial_acknowlegement, .tools_acknowledgement, .care_acknowledgement {
-    font-weight: bold;
-    margin-bottom: 8px; 
-    text-align: center;
+    gap: 0.5rem;
 }
 
 .footer__acknowledgement-link {
     display: block;
     margin-bottom: 5px; 
     text-decoration: none;
+    color: var(--clr-dark);
+    background-color: var(--clr-yellow);
+    padding: 0.5rem;
+    border-radius: 0.4em;
+
+    transition: all 0.3s ease;
 }
 
 .footer__acknowledgement-link:hover {
-    text-decoration: underline;
+    transform: scale(1.01);
 }
 
 
@@ -640,6 +641,41 @@ footer {
     font-size: var(--size-xl);
 }
 
+/*  Definition List */
+
+dl {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  dt {
+    font-weight: 700;
+    color: #2c3e50;
+    margin-top: 20px;
+    font-size: 1.2em;
+  }
+  
+  dd {
+    margin-left: 0;
+    padding-left: 15px;
+    color: #34495e;
+    font-size: 1em;
+    line-height: 1.6;
+    border-left: 3px solid #bdc3c7;
+    padding-left: 10px;
+  }
+  
+  dt:hover {
+    color: #16a085;
+  }
+  
+  dd:hover {
+    background-color: #ecf0f1;
+  }
 
 /* CLASSIFICATION PAGE */
 .classification__wrapper {
@@ -2541,12 +2577,20 @@ legend {
 
     .family-flip-card-front h1,
     .genus-flip-card-front h1,
-    .species-flip-card-front h1,
-    .flip-card-front h1 {
+    .species-flip-card-front h1 {
         font-size: var(--size-3xl);
         justify-content: center;
         align-items: center;
         color: var(--clr-dark);
+    }
+
+    .dipterocarpaceae-flip-card-front h1,
+    .hopea-flip-card-front h1,
+    .odorata-flip-card-front h1 {
+        font-size: var(--size-3xl);
+        justify-content: center;
+        align-items: center;
+        color: var(--clr-yellow);
     }
     
     .flip-card-back ul,
@@ -2559,10 +2603,9 @@ legend {
     
     .family-flip-card-back h1,
     .genus-flip-card-back h1,
-    .species-flip-card-back h1,
-    .flip-card-back h1{
+    .species-flip-card-back h1 {
         font-size: var(--size-3xl);
-        color: var(--clr-dark);
+        color: var(--clr-yellow);
     }
     
     /* flip card image styles */
