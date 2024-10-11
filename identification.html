@@ -77,14 +77,34 @@
         <h1>Identify Your Plant</h1>
 
         <article class="identify__upload-wrapper">
+            <h2>How to Identify Plants</h2>
+            <ol>
+                <li>Upload a clear image of the plant.</li>
+                <li>Wait for the system to analyze the image.</li>
+                <li>View the scientific name and common name.</li>
+                <li>Explore the herbarium specimen.</li>
+            </ol>
 
+             <!-- Maybe tell the user some tips like showing the pic of t the bark or something -->
+
+            <form class="identify__form" action="#" method="post">
+                <label for="plant-image">Upload Image:</label>
+                <input type="file" id="plant-image" name="plant-image" accept="image/*" required="required">
+                <button onclick="" class="identify__btn btn">Search</button>
+            </form>
         </article>
 
         <article class="identify__result-wrapper">
+            <h2>Identification Result</h2>
+
+            <p><strong>Scientific Name: </strong></p>
+            <p><strong>Common Name: </strong></p>
+            <p><strong>Description: </strong></p>
+
             <section class="identify__result-img-wrapper">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
+                <img src="" alt="Img-Result-1">
+                <img src="" alt="Img-Result-2">
+                <img src="" alt="Img-Result-3">
             </section>
         </article>
     </main>
