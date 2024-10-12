@@ -791,12 +791,10 @@ dl {
 .species-flip-card-front,
 .dipterocarpaceae-flip-card-front,
 .hopea-flip-card-front,
-.odorata-flip-card-front{
+.odorata-flip-card-front    {
     transform: rotateY(0deg);
     z-index: 2;
-    background-color: var(--clr-yellow);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
-    color: var(--clr-green);
 }
 
 .family-flip-card-back,
@@ -804,8 +802,7 @@ dl {
 .species-flip-card-back,
 .flip-card-back{
     transform: rotateY(180deg);
-    background-color: var(--clr-green);
-    color: var(--clr-light);
+    background-color: var(--clr-green); 
     padding: 0.5rem;
 }
 
@@ -850,6 +847,8 @@ dl {
     background-image: url('images/classification_page/dipterocarpaceae.jpeg');
     background-size: cover;
     background-position: center;
+    width: 100%;
+    height: 100%;
 }
 
 .hopea-flip-card-front{
@@ -2605,7 +2604,7 @@ legend {
     .genus-flip-card-back h1,
     .species-flip-card-back h1 {
         font-size: var(--size-3xl);
-        color: var(--clr-yellow);
+        color: var(--clr-dark);
     }
     
     /* flip card image styles */
@@ -2613,9 +2612,30 @@ legend {
         width: 25rem;
         height: 27rem;
         object-fit: cover;
-        border-radius: 0.4em;
+        border-radius: 0.4em;
     }
 
+    /* flip card front image styles */
+    .dipterocarpaceae-flip-card-front{
+        background-image: url('images/classification_page/dipterocarpaceae.jpeg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+    }
+
+    .hopea-flip-card-front{
+        background-image: url('images/classification_page/hopea.jpeg');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .odorata-flip-card-front{
+        background-image: url('images/classification_page/Hopea_Odorata.jpg');
+        background-size: cover;
+        background-position: center;
+    }
 
     /* TUTORIAL PAGE */
     #tutorial {
