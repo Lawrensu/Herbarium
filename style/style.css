@@ -332,7 +332,7 @@ button {
 
 /* Footer */
 footer {
-    margin-top: 6rem;
+    margin-top: 4rem;
     background-color: var(--clr-green);
     color: var(--clr-light);
     padding: 2rem;
@@ -395,8 +395,7 @@ footer {
 }
 
 .footer__acknowledgement-link {
-    display: block;
-    margin-bottom: 5px; 
+    display: block; 
     text-decoration: none;
     color: var(--clr-dark);
     background-color: var(--clr-yellow);
@@ -442,6 +441,42 @@ footer {
     opacity: 0.8;
 }
 
+/*  Definition List */
+dl {
+    background-color: var(--clr-yellow);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    margin: 0 auto;
+    margin-top: 1rem;
+  }
+  
+  dt {
+    font-weight: 700;
+    color: #2c3e50;
+    margin-top: 20px;
+    font-size: 1.2em;
+  }
+  
+  dd {
+    margin-left: 0;
+    padding-left: 15px;
+    color: #34495e;
+    font-size: 1em;
+    line-height: 1.6;
+    border-left: 3px solid #bdc3c7;
+    padding-left: 10px;
+  }
+  
+  dt:hover {
+    color: #16a085;
+  }
+  
+  dd:hover {
+    background-color: #ecf0f1;
+  }
+
 
 /* INDEX PAGE */
 .index__intro-wrapper {
@@ -457,8 +492,9 @@ footer {
 }
 
 .index__intro-box {
-    padding: 2rem;
-    max-width: 40em;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 2rem;
 }
 
 .index__intro-title {
@@ -468,13 +504,16 @@ footer {
 }
 
 .index__intro-desc {
+    background-color: rgba(0, 0, 0, 0.4); 
     font-size: var(--size-2xl);
     color: var(--clr-yellow);
+    padding: 1rem; 
+    border-radius: 0.4em;
 }
 
 /* Defintion Part */
 .index__definition-wrapper {
-    margin-top: 2em;
+    margin-top: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -485,7 +524,7 @@ footer {
 }
 
 .index__definition-box {
-    padding: 2rem;
+    padding: 0 2rem 2rem 2rem;
     color: var(--clr-dark);
 }
 
@@ -495,7 +534,7 @@ footer {
 }
 
 .index__definition-desc {
-    font-size: var(--size-xl);
+    font-size: var(--size-base);
     text-align: justify;
     text-justify: inter-word;
 }
@@ -509,7 +548,7 @@ footer {
 
 /* Study of Herbarium Part */
 .index__study-wrapper {
-    margin-top: 4em;
+    margin-top: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -585,7 +624,7 @@ footer {
 
 /* Tutorial Part */
 .index__tutorial-wrapper {
-    margin-top: 4rem;
+    margin-top: 2rem;
 }
 
 .index__tutorial-title {
@@ -623,8 +662,7 @@ footer {
 
 .index__tutorial-box p {
     font-size: var(--size-base);
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    padding: 0.5em;
 }
 
 .index__tutorial-btn {
@@ -641,45 +679,10 @@ footer {
     font-size: var(--size-xl);
 }
 
-/*  Definition List */
-
-dl {
-    background-color: var(--clr-yellow);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    max-width: 700px;
-    margin: 0 auto;
-    margin-top: 1rem;
-  }
-  
-  dt {
-    font-weight: 700;
-    color: #2c3e50;
-    margin-top: 20px;
-    font-size: 1.2em;
-  }
-  
-  dd {
-    margin-left: 0;
-    padding-left: 15px;
-    color: #34495e;
-    font-size: 1em;
-    line-height: 1.6;
-    border-left: 3px solid #bdc3c7;
-    padding-left: 10px;
-  }
-  
-  dt:hover {
-    color: #16a085;
-  }
-  
-  dd:hover {
-    background-color: #ecf0f1;
-  }
 
 /* CLASSIFICATION PAGE */
 .classification__wrapper {
+    margin-top: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -689,11 +692,11 @@ dl {
 .classification__title {
     text-align: center;
     font-size: var(--size-5xl);
-    margin-top: 4rem;
+    
 }
 
 .classification-row-container{
-    margin-top: 4rem;
+    margin-top: 2rem;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -713,7 +716,6 @@ dl {
 }
 
 .classification-diagram {
-    height: auto;
     margin: 0 auto;
     width: 90vw;
     border-radius: 0.4em;
@@ -738,7 +740,7 @@ dl {
 }
 
 .family_title {
-    font-size: var(--size-3xl);
+    font-size: var(--size-4xl);
     text-align: center;
     color: var(--clr-dark);
     margin-top: 6rem;
@@ -845,6 +847,7 @@ dl {
 .odorata-flip-card-front    {
     transform: rotateY(0deg);
     z-index: 2;
+    background-color: var(--clr-yellow);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);  
 }
 
@@ -854,12 +857,17 @@ dl {
 .flip-card-back{
     transform: rotateY(180deg);
     background-color: var(--clr-green); 
-    padding: 0.5rem;
 }
 
 .family-flip-card-front h1,
 .genus-flip-card-front h1,
-.species-flip-card-front h1,
+.species-flip-card-front h1 {
+    font-size: var(--size-3xl);
+    justify-content: center;
+    align-items: center;
+    color: var(--clr-dark);
+}
+
 .dipterocarpaceae-flip-card-front h1,
 .hopea-flip-card-front h1,
 .odorata-flip-card-front h1{
@@ -874,7 +882,7 @@ dl {
 .family-flip-card-back ul,
 .genus-flip-card-back ul,
 .species-flip-card-back ul{
-    font-size: var(--size-lg);
+    font-size: var(--size-base);
     color: var(--clr-dark);
 }
 
@@ -884,6 +892,7 @@ dl {
 .flip-card-back h1{
     font-size: var(--size-3xl);
     color: var(--clr-dark);
+    margin-bottom: 1em;
 }
 
 
@@ -917,6 +926,7 @@ dl {
     flex-direction: column;
     gap: 1rem;
     align-items: center;
+    border-radius: 0.4em;
 }
 
 .tutorial__steps-box {
@@ -950,7 +960,7 @@ dl {
     margin-top: 2rem;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .tutorial__video-wrapper {
@@ -959,6 +969,24 @@ dl {
     justify-content: space-evenly;
     padding: 0.5rem;
     grid-template-columns: repeat(auto-fit, minmax(20em, 1fr)); 
+}
+
+.tutorial__video-wrapper .video-recommendation {
+    background-color: var(--clr-yellow);
+    padding: 2rem; 
+    border-radius: 0.5rem; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.tutorial__video-wrapper .video-recommendation iframe {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9; 
+    }
+
+.tutorial__video-wrapper .video-recommendation:hover {
+    transform: scale(1.02);
 }
 
 .tutorial__next-btn {
@@ -2282,55 +2310,26 @@ legend {
 
 
     /* INDEX PAGE */
-    .index__intro-wrapper {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 2rem;
-        padding: 12rem 2rem;
-        background-image: url('images/index_page/index__bg.jpeg');
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    }
 
-    .index__intro-box {
-        padding: 2rem;
-        color: var(--clr-light);
-        width: 100%;
-        max-width: 40em;
-        border-radius: 0.4em;
-    }
-    
     .index__intro-title {
-        font-size: var(--size-6xl);
-        margin-bottom: 1rem;
-        color: var(--clr-dark);
+        font-size: var(--size-7xl);
     }
 
     .index__intro-desc {
         font-size: var(--size-4xl);
-        margin-bottom: 1rem;
-        color: var(--clr-yellow);
     }
 
     /* Defintion Part */
     .index__definition-wrapper {
         text-align: left;
         margin-top: 4em;
-        display: flex;
         flex-direction: row;
-        align-items: center;
-        flex-wrap: wrap;
         gap: 8em;
         padding: 0 5em;
     }
 
-    .index__definition-box {
-        padding: 2rem;
-        color: var(--clr-dark);
-        border-radius: 0.4em;
+    .index__definition-title {
+        font-size: var(--size-8xl);
     }
 
     .index__definition-box:nth-child(1) {
@@ -2338,87 +2337,21 @@ legend {
     }
 
     .index__definition-title {
-        font-size: var(--size-4xl);
-        margin-bottom: 1rem;
+        font-size: var(--size-6xl);
     }
 
     .index__definition-desc {
         font-size: var(--size-xl);
-        margin-bottom: 1rem;
-        text-align: justify;
-        text-justify: inter-word;
     }
 
     .index__definition-img {
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         flex: 1;
         width: 10em;
-        object-fit: cover;
-        border-radius: 0.4em;
     }
 
     /* Study of Herbarium Part */
-    .index__study-wrapper {
-        margin-top: 4em;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        flex-wrap: wrap;
-        padding: 0;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
     .index__study-box {
-        position: relative;
-        display: flex;
         padding: 6em 2em;
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-    }
-    
-    .index__study-box::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: rgba(0, 0, 0, 0.5);
-        z-index: 1;
-    }
-
-    .index__study-box:nth-child(1) {
-        background-image: url('images/index_page/index__study-bg.jpeg');
-        text-align: right;
-        justify-content: flex-end;
-    }
-
-    .index__study-box:nth-child(1) > * {
-        position: relative;
-        z-index: 2;
-    }
-
-    .index__study-box:nth-child(2) {
-        background-image: url('images/index_page/index__study-bg2.jpg');
-        text-align: left;
-        justify-content: flex-start;
-    }
-
-    .index__study-box:nth-child(2) > * {
-        position: relative;
-        z-index: 2;
-    }
-
-    .index__study-box:nth-child(3) {
-        background-image: url('images/index_page/index__study-bg3.jpg');
-        text-align: right;
-        justify-content: flex-end;
-    }
-
-    .index__study-box:nth-child(3) > * {
-        position: relative;
-        z-index: 2;
     }
 
     .index__study-textbox {
@@ -2427,11 +2360,7 @@ legend {
     }
 
     .index__study-desc {
-        color: var(--clr-light);
         font-size: var(--size-xl);
-        margin-bottom: 1rem;
-        text-align: justify;
-        text-justify: inter-word;
     }
 
     /* Tutorial Part */
@@ -2440,54 +2369,23 @@ legend {
     }
 
     .index__tutorial-title {
-        font-size: var(--size-4xl);
-        text-align: center;
+        font-size: var(--size-5xl);
     }
 
     .index__tutorial-box-wrapper {
         margin-top: 2em;
-        margin-bottom: 2em;
-        display: flex;
         flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        gap: 2em;
         padding: 2em;
     }
 
     .index__tutorial-box {
-        display: flex;
-        flex-direction: column;
-        background-color: var(--clr-yellow);
-        padding: 2rem;
-        gap: 1rem;
-        border-radius: 0.4em;
-        text-align: center;
         max-width: 45%;
         min-width: 250px;
         flex: 1 1 45%;
     }
 
-    .index__tutorial-box img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        border-radius: 0.4em;
-    }
-
     .index__tutorial-box p {
         font-size: var(--size-lg);
-        margin-top: 1rem;
-    }
-
-    .index__tutorial-btn {
-        width: var(--size-10xl);
-        margin: 0 auto;
-    }
-
-    .index__ending-wrapper {
-        margin-top: 6rem;
-        text-align: center;
     }
 
     .index__ending-wrapper p {
@@ -2496,57 +2394,22 @@ legend {
 
 
     /* CLASSIFICATION PAGE */
-    .classification__wrapper {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
     .classification__title {
-        text-align: center;
         font-size: var(--size-6xl);
-        margin-top: 4rem;
     }
     
     .classification-row-container{
-        margin-top: 4rem;
-        display: flex;
         flex-direction: row;
-        gap: 2rem;
         justify-content: space-between;
         align-items: center;
     }
-
-    .classification__card-wrapper {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-    }
     
     .flip-card-container {
-        display: flex;
         flex-direction: row;
-        justify-content: center;
-        gap: 2rem;
     }
     
     .classification-diagram {
-        max-width: 100%;
-        height: auto;
         width: 55rem;
-        border-radius: 0.4em;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
-    }
-    
-    /* flip cards */
-    .family-flip-card,
-    .genus-flip-card,
-    .species-flip-card,
-    .flip-card{
-        perspective: 1000px;
-        box-sizing: border-box;
-        border-radius: 0.4em;
     }
     
     .family-flip-card,
@@ -2557,10 +2420,7 @@ legend {
     }
 
     .family_title {
-        font-size: var(--size-4xl);
-        color: var(--clr-dark);
-        margin-top: 6rem;
-        margin-bottom: 4rem;
+        font-size: var(--size-5xl);
         text-align: left;
     }
     
@@ -2570,85 +2430,17 @@ legend {
         height: 30rem;
         border-radius: 0.4em;
     }
-    
-    /* flip card inner */
-    .family-flip-card-inner,
-    .genus-flip-card-inner,
-    .species-flip-card-inner,
-    .flip-card-inner{
-        position: relative;
-        width: 100%;
-        height: 100%;
-        transition: transform 0.6s;
-        transform-style: preserve-3d;
-    }
-    
-    /* flip card front and back */
-    .family-flip-card-front,
-    .genus-flip-card-front,
-    .species-flip-card-front,
-    .flip-card-front,
-    .family-flip-card-back,
-    .genus-flip-card-back,
-    .species-flip-card-back,
-    .flip-card-back{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        backface-visibility: hidden;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        border-radius: 0.4em;
-    }
-    
-    .family-flip-card-front,
-    .genus-flip-card-front,
-    .species-flip-card-front,
-    .flip-card-front{
-        transform: rotateY(0deg);
-        z-index: 2;
-        background-color: var(--clr-yellow);
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
-        color: var(--clr-green);
-    }
-    
-    .family-flip-card-back,
-    .genus-flip-card-back,
-    .species-flip-card-back,
-    .flip-card-back{
-        transform: rotateY(180deg);
-        background-color: var(--clr-green);
-        color: var(--clr-light);
-        padding: 0.5rem;
-    }
-    
-    /* flip card hover effect */
-    .flip-card:hover .flip-card-inner,
-    .family-flip-card:hover .family-flip-card-inner,
-    .genus-flip-card:hover .genus-flip-card-inner,
-    .species-flip-card:hover .species-flip-card-inner{
-        transform: rotateY(180deg);
-    }
 
     .family-flip-card-front h1,
     .genus-flip-card-front h1,
     .species-flip-card-front h1 {
-        font-size: var(--size-3xl);
-        justify-content: center;
-        align-items: center;
-        color: var(--clr-dark);
+        font-size: var(--size-4xl);
     }
 
     .dipterocarpaceae-flip-card-front h1,
     .hopea-flip-card-front h1,
     .odorata-flip-card-front h1 {
-        font-size: var(--size-3xl);
-        justify-content: center;
-        align-items: center;
-        color: var(--clr-yellow);
+        font-size: var(--size-4xl);
     }
     
     .flip-card-back ul,
@@ -2665,130 +2457,18 @@ legend {
         font-size: var(--size-3xl);
         color: var(--clr-dark);
     }
-    
-    /* flip card image styles */
-    .flip-card-front img{
-        width: 25rem;
-        height: 27rem;
-        object-fit: cover;
-        border-radius: 0.4em;
-    }
 
-    /* flip card front image styles */
-    .dipterocarpaceae-flip-card-front{
-        background-image: url('images/classification_page/dipterocarpaceae.jpeg');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        width: 100%;
-        height: 100%;
-    }
-
-    .hopea-flip-card-front{
-        background-image: url('images/classification_page/hopea.jpeg');
-        background-size: cover;
-        background-position: center;
-    }
-
-    .odorata-flip-card-front{
-        background-image: url('images/classification_page/Hopea_Odorata.jpg');
-        background-size: cover;
-        background-position: center;
-    }
 
     /* TUTORIAL PAGE */
-    #tutorial {
-        margin-top: 4rem;
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-    }
-
     .tutorial__section-title {
         font-size: var(--size-6xl);
-        text-align: center;
-    }
-
-   .tutorial__btn {
-        margin: 0 auto;
-   }
-
-    .step, .video-recommendation {
-        border: 2px solid var(--clr-dark);
-        padding: 20px;
-        margin: 20px 0;
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        align-items: center;
-    }
-
-    .tutorial__steps-box {
-        text-align: center;
-        display: grid;
-        gap: 2rem;
-        justify-content: space-evenly;
-        padding: 1rem;
-        grid-template-columns: repeat(auto-fit, minmax(20em, 1fr)); 
-    }
-
-    .tutorial__steps-box .step {
-        background-color: var(--clr-yellow);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        border: 2px solid var(--clr-dark);
-        border-radius: 0.4em;
-        padding: 20px;
-        margin: 20px 0;
-        box-sizing: border-box;
-    }
-
-    .tutorial__steps-box img {
-        width: 20em;
-        height: 20em;
-        object-fit: cover;
-        border-radius: 0.4em;
-    }
-
-    #video {
-        margin-top: 4rem;
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-        
     }
 
     .tutorial__video-wrapper {
-        display: grid;
-        gap: 2rem;
-        justify-content: space-evenly;
         padding: 1rem;
-        grid-template-columns: repeat(auto-fit, minmax(20em, 1fr)); 
     }
+
     
-    .tutorial__video-wrapper .video-recommendation {
-        background-color: var(--clr-yellow);
-        padding: 1rem; 
-        border-radius: 0.5rem; 
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease;
-    }
-    
-    .tutorial__video-wrapper .video-recommendation iframe {
-        width: 100%;
-        height: auto;
-        aspect-ratio: 16 / 9; 
-    }
-    .tutorial__video-wrapper .video-recommendation:hover {
-        transform: scale(1.02);
-    }
-
-    .tutorial__next-btn {
-        margin: 0 auto;
-    }
-
-
     /* TOOLS PAGE */
     .tools__wrapper {
         margin-top: 4rem;
