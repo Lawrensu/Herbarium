@@ -355,7 +355,7 @@ footer {
 
 .footer__essential-icon-wrapper {
     display: flex;
-    gap: 2rem;
+    gap: 1.5rem;
     justify-content: center;
     align-items: center;
 }
@@ -373,21 +373,23 @@ footer {
     transform: scale(1.2);
 }
 
-
 .main-acknowledgement {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
     font-weight: bold;
     text-align: center;
-    margin-bottom: 5px; 
 }
 
 .footer__acknowledgement-wrapper {
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 1rem; 
-    padding: 5px 0; 
 }
 
 .acknowledgement-section {
+    justify-content: center;
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -407,8 +409,9 @@ footer {
 
 .footer__acknowledgement-link:hover {
     transform: scale(1.01);
+    color: var(--clr-yellow);
+    background: var(--clr-dark);
 }
-
 
 .enhancement__btn {
     margin-top: 2rem;
@@ -2331,51 +2334,21 @@ legend {
     }
 
     /* Footer for bigger display */
-    footer {
-        margin-top: 6rem;
-        background-color: var(--clr-green);
-        color: var(--clr-light);
-        padding: 2rem;
-        text-align: center;
-    }
-    
-    .footer__essential-wrapper {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        gap: 1em;
-    }
-    
-    .footer__essential-box {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-    }
     
     .footer__essential-icon-wrapper {
-        display: flex;
         gap: 2rem;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .footer__essential-icon {
-        color: var(--clr-dark);
-        width: var(--size-4xl);
-        height: var(--size-4xl);
-    
-        transition: color 0.3s ease, transform 0.3s ease;
-    }
-    
-    .footer__essential-icon:hover {
-        color: var(--clr-orange);
-        transform: scale(1.2);
     }
     
     .footer__acknowledgement-wrapper {
-        margin-top: 2rem;
+        flex-direction: row;
     }
 
+    .acknowledgement-section {
+        display: flex;
+        flex-direction: row;
+        flex: 1;
+        gap: 0.5rem;
+    }
 
     /* INDEX PAGE */
 
