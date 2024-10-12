@@ -882,6 +882,11 @@ dl {
     margin: 0 auto;
 }
 
+.step:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
 .step, .video-recommendation {
     border: 2px solid var(--clr-dark);
     display: flex;
@@ -2702,6 +2707,7 @@ legend {
         display: flex;
         flex-direction: column;
         gap: 2rem;
+        
     }
 
     .tutorial__video-wrapper {
@@ -2710,6 +2716,23 @@ legend {
         justify-content: space-evenly;
         padding: 1rem;
         grid-template-columns: repeat(auto-fit, minmax(20em, 1fr)); 
+    }
+    
+    .tutorial__video-wrapper .video-recommendation {
+        background-color: var(--clr-yellow);
+        padding: 1rem; 
+        border-radius: 0.5rem; 
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+    
+    .tutorial__video-wrapper .video-recommendation iframe {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9; 
+    }
+    .tutorial__video-wrapper .video-recommendation:hover {
+        transform: scale(1.02);
     }
 
     .tutorial__next-btn {
@@ -2882,6 +2905,57 @@ legend {
         justify-content: center;
         gap: 4rem;
         align-items: center;
+    }
+    
+    /*VIDEO CARE PAGE*/
+    .care__video-wrapper {
+        display: flex;
+        justify-content: center;
+        padding: 1rem;
+        margin: 0 auto;
+        width: 750px;
+        max-width: 900px;
+    }
+
+    .video-care {
+        background-color:var(--clr-yellow);
+        padding: 1rem;
+        border-radius: 2%;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+        width: 100%;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .video-care:hover{
+        transform: scale(1.05);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .video-container {
+        position: relative;
+        padding-bottom: 56.25%; 
+        height: 0;
+        overflow: hidden;
+    }
+
+    .video-container video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .video-care p {
+        text-align: center;
+        font-size: 1rem;
+        margin-top: 0.5rem;
+    }
+
+    .care-header {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 1rem;
     }
 
 
