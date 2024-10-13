@@ -1081,7 +1081,7 @@ dl {
 .aftercare__grid-container {
     margin-top: 2rem;
     display: flex;
-    grid-template-columns: repeat(auto-fit, minmax(15em, 1fr)); 
+    flex-direction: column;
     gap: 2rem;
     justify-content: space-around;
 }
@@ -1102,6 +1102,11 @@ dl {
     border: 5px dashed rgb(3, 95, 23);
     border-image: linear-gradient(to right, rgb(3, 95, 23), rgb(34, 193, 195)) 1;
     cursor: pointer;
+
+    flex: 1 1 100%;
+    max-width: 100%;
+    transform: scale(1.1);
+    filter: none;
     
 }
 
@@ -1142,7 +1147,7 @@ dl {
 }
 
 .aftercare__card:focus-within, .aftercare__card:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
     z-index: 10;
 }
 
@@ -1150,35 +1155,6 @@ dl {
 .aftercare__grid-container:has(.aftercare__card:hover) .aftercare__card:not(:hover) {
     filter: blur(4px);
     transition: all 0.3s ease;
-}
-
-@media (max-width: 768px) {
-    .aftercare__grid-container {
-        flex-direction: column;
-        align-items: center;
-    }
-    .aftercare__card {
-        flex: 1 1 100%;
-        max-width: 100%;
-        transform: scale(1.2);
-        filter: none;
-    }
-
-    .aftercare__card:focus-within, .aftercare__card:hover {
-        transform: scale(1.2);
-    }
-
-    .aftercare__grid-container:has(.aftercare__card:focus-within) .aftercare__card:not(:focus-within),
-    .aftercare__grid-container:has(.aftercare__card:hover) .aftercare__card:not(:hover) {
-        filter: scale(1.2);
-    }
-}
-
-@media (max-width: 480px) {
-    .aftercare__card {
-        padding: 15px;
-        font-size: 0.9em;
-    }
 }
 
 
@@ -2574,10 +2550,21 @@ legend {
 
     .aftercare__grid-container {
         margin-top: 4rem;
+        flex-direction: row;
     }
 
     .aftercare__card {
         padding: 1rem;
+        cursor: default;
+    }
+
+    .aftercare__card:focus-within, .aftercare__card:hover {
+        transform: scale(1.2);
+    }
+
+    .aftercare__grid-container:has(.aftercare__card:focus-within) .aftercare__card:not(:focus-within),
+    .aftercare__grid-container:has(.aftercare__card:hover) .aftercare__card:not(:hover) {
+        filter: scale(1.2);
     }
     
     .aftercare__card img {
