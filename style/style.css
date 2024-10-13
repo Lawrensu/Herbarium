@@ -2138,8 +2138,19 @@ legend {
 
 
 /* ENHANCEMENT PAGE */
+.enhancement__wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-top: 4rem;
+    justify-content: center;
+    align-items: center;
+}
 
-
+.enhancement__wrapper h1 {
+    text-align: center;
+    color: var(--clr-dark);
+    font-size: var(--size-5xl);
+}
 
 
 /* PC display starts here */
@@ -2348,7 +2359,6 @@ legend {
     }
 
     /* Footer for bigger display */
-    
     .footer__essential-icon-wrapper {
         gap: 2rem;
     }
@@ -2358,14 +2368,12 @@ legend {
     }
 
     .acknowledgement-section {
-        display: flex;
         flex-direction: row;
-        flex: 1;
-        gap: 0.5rem;
+        flex-wrap: wrap;
     }
 
-    /* INDEX PAGE */
 
+    /* INDEX PAGE */
     .index__intro-title {
         font-size: var(--size-7xl);
     }
