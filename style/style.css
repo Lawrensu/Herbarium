@@ -2141,15 +2141,26 @@ legend {
 .enhancement__wrapper {
     display: flex;
     flex-direction: column;
-    padding-top: 4rem;
+    padding-top: 2rem;
     justify-content: center;
     align-items: center;
+    gap: 1rem;
 }
 
 .enhancement__wrapper h1 {
     text-align: center;
     color: var(--clr-dark);
     font-size: var(--size-5xl);
+}
+
+.enhancement__box {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    background-color: var(--clr-yellow);
+    padding: 1rem;
+    border-radius: 0.4em;
 }
 
 
@@ -2806,6 +2817,11 @@ legend {
     .login__form {
         width: 40vw; 
     }
+
+    .enhancement__wrapper h1 {
+        font-size: var(--size-6xl);
+    }
+
 }
    
 
