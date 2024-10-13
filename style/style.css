@@ -1152,6 +1152,37 @@ dl {
     transition: all 0.3s ease;
 }
 
+@media (max-width: 768px) {
+    .aftercare__grid-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .aftercare__card {
+        flex: 1 1 100%;
+        max-width: 100%;
+        transform: scale(1.2);
+        filter: none;
+    }
+
+    .aftercare__card:focus-within, .aftercare__card:hover {
+        transform: scale(1.2);
+    }
+
+    .aftercare__grid-container:has(.aftercare__card:focus-within) .aftercare__card:not(:focus-within),
+    .aftercare__grid-container:has(.aftercare__card:hover) .aftercare__card:not(:hover) {
+        filter: scale(1.2);
+    }
+}
+
+@media (max-width: 480px) {
+    .aftercare__card {
+        padding: 15px;
+        font-size: 0.9em;
+    }
+}
+
+
+
 /*VIDEO CARE PAGE*/
 .care__video-wrapper {
     width: 90vw;
