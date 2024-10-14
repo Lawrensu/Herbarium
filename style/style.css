@@ -1901,11 +1901,13 @@ legend {
 .faiq__profile h1 {
     font-size: 200%;
     font-weight: bold;
+    color: var(--clr-light);
 }
 
 .faiq__profile p {
     font-size: var(--size-xl);
     font-family: Arial, sans-serif;
+    color: var(--clr-light);
 }
 
 .faiq__table {
