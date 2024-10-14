@@ -2157,6 +2157,7 @@ legend {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    width: 90vw;
 
     background-color: var(--clr-yellow);
     padding: 1rem;
@@ -2166,7 +2167,38 @@ legend {
 .enhancement__desc-box {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem;
+    text-align: justify;
+}
+
+.enhancement__list-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.enhancement__list-wrapper ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style-type: none;
+    padding: 0;
+}
+
+.enhancement__sources-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.enhancement__sources-wrapper ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style-type: none;
+    padding: 0;
 }
 
 
@@ -2824,8 +2856,15 @@ legend {
         width: 40vw; 
     }
 
+    
+    /* ENHANCEMENT PAGE */
     .enhancement__wrapper h1 {
         font-size: var(--size-6xl);
+    }
+
+    .enhancement__box {
+        width: 95vw;
+        flex-direction: row;
     }
 
 }
