@@ -161,7 +161,7 @@ button {
     z-index: 9999;
     background-color: var(--clr-green);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    transition: all 0.2 ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 
@@ -1019,7 +1019,7 @@ dl {
     box-sizing: border-box;
     background-color: var(--clr-yellow); 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.5 ease; 
+    transition: transform 0.5s ease; 
 }
 
 .tool-item h3 {
@@ -1117,7 +1117,7 @@ dl {
     left: 0;
     height: 4px;
     width: 100%;
-    background: linear-gradient(to right, rgb(3, 95, 23), rgb(34, 193, 195)) 1;
+    background: linear-gradient(to right, rgb(3, 95, 23), rgb(34, 193, 195));
 }
 
 .aftercare__card img {
@@ -2631,7 +2631,7 @@ legend {
 
     .aftercare__grid-container:has(.aftercare__card:focus-within) .aftercare__card:not(:focus-within),
     .aftercare__grid-container:has(.aftercare__card:hover) .aftercare__card:not(:hover) {
-        filter: scale(1.2);
+        transform: scale(1.2);
     }
     
     .aftercare__card img {
